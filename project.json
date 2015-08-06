@@ -1,0 +1,55 @@
+{
+  "project_type": "javascript",
+  "debugMode": 1,
+  "showFPS": true,
+  "frameRate": 60,
+  "id": "gameCanvas",
+  "renderMode": 1,
+  "engineDir": "frameworks/cocos2d-html5",
+  "modules": [
+    "cocos2d",
+    "cocostudio",
+    "gui"
+  ],
+  "jsList": [
+    "src/resource.js",
+
+    "src/utils/md5.js",
+    "src/utils/map.js",
+    "src/utils/util.js",
+
+    "src/common/Utils.js",
+    "src/common/SoundsManager.js",
+    "src/common/AnimManager.js",
+
+    "src/level/data/Easing.js",
+    "src/level/data/BlockVo.js",
+    "src/level/data/SceneVo.js",
+    "src/level/data/LevelVo.js",
+    "src/level/data/LevelManager.js",
+
+    "src/level/LevelBase.js",
+    "src/level/Level1.js",
+    "src/level/Level2.js",
+    "src/level/Level3.js",
+    "src/level/Level4.js",
+    "src/level/Level5.js",
+    "src/level/Level6.js",
+    "src/level/Level7.js",
+    "src/level/Level8.js",
+    "src/level/Level9.js",
+    "src/level/Level10.js",
+
+    "src/App.js",
+
+    "src/game/LevelView.js",
+    "src/game/Player.js",
+    "src/game/chapter/ChapterItem.js",
+    "src/game/chapter/ChapterScene.js",
+    "src/game/layer/LevelWinLayer.js",
+    "src/game/layer/PauseLayer.js",
+    "src/game/layer/TutorialLayer.js",
+    "src/game/GameScene.js",
+    "src/game/WinScene.js"
+  ]
+}

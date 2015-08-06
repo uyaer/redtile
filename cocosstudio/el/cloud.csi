@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Type="Plist" Name="cloud" ID="570cb1f0-a9eb-409f-b0ef-d0ab1438c590" Version="2.3.1.2" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="el/1-1_cloud.png" />
+      <FilePathData Path="el/2-1_cloud.png" />
+      <FilePathData Path="el/2-2_cloud.png" />
+      <FilePathData Path="el/3-9_cloud.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

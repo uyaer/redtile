@@ -1,0 +1,212 @@
+{
+  "ID": "937173a6-9273-40d5-a5c5-59e2d9aee040",
+  "Version": "2.3.1.2",
+  "Name": "Level1",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 198,
+              "G": 218,
+              "B": 249
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 800,
+            "Scale9Height": 230,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -800.0,
+            "TopMargin": -560.0,
+            "Tag": 2,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "bg/1-1.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "TopMargin": 330.0,
+                "Tag": 3,
+                "ActionTag": 1280809862,
+                "Size": {
+                  "X": 800.0,
+                  "Y": 230.0
+                },
+                "Name": "Sprite_1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "el/1-1_cloud.png",
+                  "Plist": "el/cloud.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 658.0422,
+                  "Y": 493.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8226,
+                  "Y": 0.8804
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 489.0422,
+                "RightMargin": -27.0422,
+                "TopMargin": -50.0,
+                "BottomMargin": 376.0,
+                "Tag": 4,
+                "ActionTag": 1333588898,
+                "Size": {
+                  "X": 338.0,
+                  "Y": 234.0
+                },
+                "Name": "c1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "el/1-1_cloud.png",
+                  "Plist": "el/cloud.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 174.0,
+                  "Y": 390.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2175,
+                  "Y": 0.6964
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 5.0,
+                "RightMargin": 457.0,
+                "TopMargin": 53.0,
+                "BottomMargin": 273.0,
+                "Tag": 5,
+                "ActionTag": -1656387275,
+                "Size": {
+                  "X": 338.0,
+                  "Y": 234.0
+                },
+                "Name": "c2",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -794914475,
+            "Size": {
+              "X": 800.0,
+              "Y": 560.0
+            },
+            "Name": "colorbg",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "bg/1-1.png",
+        "el/cloud.plist",
+        "el/cloud.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

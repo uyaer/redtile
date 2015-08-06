@@ -1,0 +1,166 @@
+{
+  "ID": "e5fb9f6f-8df3-4bde-8edd-e516d115c9f1",
+  "Version": "2.3.1.2",
+  "Name": "Level10",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 39,
+        "Children": [
+          {
+            "ComboBoxIndex": 2,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "B": 207
+            },
+            "EndColor": {
+              "G": 192,
+              "B": 200
+            },
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -800.0,
+            "TopMargin": -427.0,
+            "Tag": 40,
+            "ActionTag": -1204534163,
+            "Size": {
+              "X": 800.0,
+              "Y": 427.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg/3-9.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -800.0,
+            "TopMargin": -200.0,
+            "Tag": 41,
+            "ActionTag": -181863978,
+            "Size": {
+              "X": 800.0,
+              "Y": 200.0
+            },
+            "Name": "Sprite_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "el/3-9_cloud.png",
+              "Plist": "el/cloud.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 864.0,
+              "Y": 111.0
+            },
+            "Scale": {
+              "ScaleX": 1.5,
+              "ScaleY": 1.5
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 820.5,
+            "RightMargin": -907.5,
+            "TopMargin": -133.0,
+            "BottomMargin": 89.0,
+            "Tag": 42,
+            "ActionTag": -253999389,
+            "Size": {
+              "X": 87.0,
+              "Y": 44.0
+            },
+            "Name": "c1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "bg/3-9.png",
+        "el/cloud.plist",
+        "el/cloud.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

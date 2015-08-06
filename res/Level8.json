@@ -1,0 +1,162 @@
+{
+  "ID": "2a7b3924-28ee-41f8-a7bf-44f6d9548e70",
+  "Version": "2.3.1.2",
+  "Name": "Level8",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 32,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg/3-6.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -800.0,
+            "TopMargin": -200.0,
+            "Tag": 33,
+            "ActionTag": 1754103670,
+            "Size": {
+              "X": 800.0,
+              "Y": 200.0
+            },
+            "Name": "Sprite_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "fire_0001.png",
+              "Plist": "el/fire.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5
+            },
+            "Position": {
+              "X": 215.0,
+              "Y": 80.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 183.0,
+            "RightMargin": -247.0,
+            "TopMargin": -160.0,
+            "BottomMargin": 80.0,
+            "Tag": 34,
+            "ActionTag": 1630871549,
+            "Size": {
+              "X": 64.0,
+              "Y": 80.0
+            },
+            "Name": "fire1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "fire_0001.png",
+              "Plist": "el/fire.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5
+            },
+            "Position": {
+              "X": 654.0,
+              "Y": 80.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 622.0,
+            "RightMargin": -686.0,
+            "TopMargin": -160.0,
+            "BottomMargin": 80.0,
+            "Tag": 35,
+            "ActionTag": -1230758440,
+            "Size": {
+              "X": 64.0,
+              "Y": 80.0
+            },
+            "Name": "fire2",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "bg/3-6.png",
+        "el/fire.plist",
+        "el/fire.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

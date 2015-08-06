@@ -1,0 +1,166 @@
+{
+  "ID": "8603b947-537b-405c-8f15-942ae7c1cc57",
+  "Version": "2.3.1.2",
+  "Name": "Level5",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 17,
+        "Children": [
+          {
+            "ComboBoxIndex": 2,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "G": 209,
+              "B": 219
+            },
+            "EndColor": {
+              "R": 174,
+              "G": 196,
+              "B": 251
+            },
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -800.0,
+            "TopMargin": -560.0,
+            "Tag": 18,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "bg/2-2.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "TopMargin": 268.0,
+                "Tag": 19,
+                "ActionTag": -859539201,
+                "Size": {
+                  "X": 800.0,
+                  "Y": 292.0
+                },
+                "Name": "Sprite_1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "el/2-2_cloud.png",
+                  "Plist": "el/cloud.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 800.0,
+                  "Y": 140.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.0,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 800.0,
+                "RightMargin": -531.0,
+                "TopMargin": 248.0,
+                "BottomMargin": 140.0,
+                "Tag": 20,
+                "ActionTag": 64450446,
+                "Size": {
+                  "X": 531.0,
+                  "Y": 172.0
+                },
+                "Name": "cloud",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -1614903136,
+            "Size": {
+              "X": 800.0,
+              "Y": 560.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "bg/2-2.png",
+        "el/cloud.plist",
+        "el/cloud.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

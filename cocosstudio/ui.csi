@@ -1,0 +1,18 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Type="Plist" Name="ui" ID="975086bf-6a36-4cc9-95ac-9a0538300194" Version="2.3.1.2" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="ui/bb.png" />
+      <FilePathData Path="ui/home.png" />
+      <FilePathData Path="ui/item.png" />
+      <FilePathData Path="ui/music_close.png" />
+      <FilePathData Path="ui/music_open.png" />
+      <FilePathData Path="ui/next.png" />
+      <FilePathData Path="ui/pause.png" />
+      <FilePathData Path="ui/quadbg.png" />
+      <FilePathData Path="ui/share.png" />
+      <FilePathData Path="ui/win.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

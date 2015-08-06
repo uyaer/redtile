@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>ui/bb.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,380},{400,154}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{400,154}</string>
+			</dict>
+			<key>ui/home.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{706,1},{106,106}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{106,106}</string>
+			</dict>
+			<key>ui/item.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{706,143},{25,25}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{25,25}</string>
+			</dict>
+			<key>ui/music_close.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{362,288},{70,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{70,83}</string>
+			</dict>
+			<key>ui/music_open.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{434,288},{70,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{70,83}</string>
+			</dict>
+			<key>ui/next.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{362,1},{342,177}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{342,177}</string>
+			</dict>
+			<key>ui/pause.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{640,180},{170,200}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{170,200}</string>
+			</dict>
+			<key>ui/quadbg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{706,109},{32,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,32}</string>
+			</dict>
+			<key>ui/share.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{362,180},{276,106}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{283,110}</string>
+			</dict>
+			<key>ui/win.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{359,377}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{360,378}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>ui.png</string>
+			<key>realTextureFileName</key>
+			<string>ui.png</string>
+			<key>size</key>
+			<string>{813,535}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>813</integer>
+			<key>height</key>
+			<integer>535</integer>
+		</dict>
+	</dict>
+</plist>
