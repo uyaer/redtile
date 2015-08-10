@@ -1,2 +1,10 @@
-
+obj
 .idea/*
+*_PList.Dir
+*.o
+*.so
+debug
+bin
+gen
+simulator/*
+frameworks/runtime-src/proj.android/assets

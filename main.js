@@ -48,9 +48,17 @@
  */
 
 cc.game.onStart = function(){
+    var IS_EDITOR_MODE = false;
     cc.view.adjustViewPort(true);
-    cc.view.setDesignResolutionSize(400, 712, cc.ResolutionPolicy.SHOW_ALL);
-    //cc.view.setDesignResolutionSize(800, 712, cc.ResolutionPolicy.SHOW_ALL);
+    if(!IS_EDITOR_MODE){
+        if(!cc.sys.isMobile){
+            cc.view.setDesignResolutionSize(400, 712, cc.ResolutionPolicy.SHOW_ALL);
+        }else{
+            cc.view.setDesignResolutionSize(400, 712, cc.ResolutionPolicy.FIXED_WIDTH);
+        }
+    }else{
+        cc.view.setDesignResolutionSize(800, 712, cc.ResolutionPolicy.SHOW_ALL);
+    }
     cc.view.resizeWithBrowserSize(true);
 
     var size = cc.winSize;
@@ -67,8 +75,11 @@ cc.game.onStart = function(){
         cc.spriteFrameCache.addSpriteFrames(res.player);
         AnimManager.instance.init();
 
-        cc.director.runScene(new ChapterScene());
-        //cc.director.runScene(new MapEditor());
+        if(!IS_EDITOR_MODE){
+            cc.director.runScene(new ChapterScene());
+        }else{
+            cc.director.runScene(new MapEditor());
+        }
     }, this);
 };
 cc.game.run();
