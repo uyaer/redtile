@@ -51,7 +51,7 @@
               "X": 800.0,
               "Y": 560.0
             },
-            "Name": "Sprite_2",
+            "Name": "bg",
             "ctype": "SpriteObjectData"
           }
         ],

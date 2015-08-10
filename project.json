@@ -42,6 +42,8 @@
 
     "src/App.js",
 
+    "src/MapEditor.js",
+
     "src/game/LevelView.js",
     "src/game/Player.js",
     "src/game/chapter/ChapterItem.js",

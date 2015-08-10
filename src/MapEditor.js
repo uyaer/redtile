@@ -9,7 +9,9 @@ var MapEditor = cc.Scene.extend({
     ctor: function () {
         this._super();
 
-        this.lv = 40;
+
+
+        this.lv = 5;
         this.init(this.lv);
 
         cc.eventManager.addListener({
@@ -39,6 +41,9 @@ var MapEditor = cc.Scene.extend({
         this.blockSceneArr = [];
 
         this.removeAllChildren(true);
+
+        var bg = new cc.LayerColor(cc.color(255,255,255),App.WIN_W,App.WIN_H);
+        this.addChild(bg);
 
         this.makeScenes(lv);
     },
@@ -70,10 +75,14 @@ var MapEditor = cc.Scene.extend({
         var bg;
         if (ext == "swf") {
             bg = new LevelSwfMap[bgName]();
+            bg.fitBackground(this.everyH);
         } else {
             //TODO color bg
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
+            if (bg.height < this.everyH) {
+                bg.scaleY = this.everyH / bg.height;
+            }
         }
         sceneNode.addChild(bg, -i);
         bg.y = -30;
