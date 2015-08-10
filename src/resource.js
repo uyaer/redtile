@@ -57,6 +57,7 @@ var res = {
     ui: "res/ui.plist",
     ui_png: "res/ui.png"
 
+
 }
 
 var g_resources = [];

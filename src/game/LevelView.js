@@ -34,7 +34,8 @@ var LevelView = cc.Layer.extend({
         this.addChild(this.player, 100);
         this.playerRunAnim = null;
 
-
+        //this.nextScene();
+        //this.nextScene();
     },
 
     makeScenes: function (lv) {
@@ -73,8 +74,14 @@ var LevelView = cc.Layer.extend({
         } else {
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
-            if (bg.height < this.everyH) {
-                bg.scaleY = this.everyH / bg.height;
+            var skyColor = sceneVo.sky;
+            if (skyColor) {
+                var sky = new cc.LayerColor(hex2Color(skyColor), App.WIN_W, this.everyH);
+                sceneNode.addChild(sky, -i);
+            } else {
+                if (bg.height < this.everyH) {
+                    bg.scaleY = this.everyH / bg.height;
+                }
             }
         }
         sceneNode.addChild(bg, -i);

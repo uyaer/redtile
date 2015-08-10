@@ -11,7 +11,7 @@ var MapEditor = cc.Scene.extend({
 
 
 
-        this.lv = 40;
+        this.lv = 1;
         this.init(this.lv);
 
         cc.eventManager.addListener({
@@ -79,8 +79,14 @@ var MapEditor = cc.Scene.extend({
         } else {
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
-            if (bg.height < this.everyH) {
-                bg.scaleY = this.everyH / bg.height;
+            var skyColor = sceneVo.sky;
+            if (skyColor) {
+                var sky = new cc.LayerColor(hex2Color(skyColor), App.WIN_W, this.everyH);
+                sceneNode.addChild(sky, -i);
+            } else {
+                if (bg.height < this.everyH) {
+                    bg.scaleY = this.everyH / bg.height;
+                }
             }
         }
         sceneNode.addChild(bg, -i);

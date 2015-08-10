@@ -12,6 +12,7 @@ function SceneVo(sceneObj) {
 }
 SceneVo.prototype.setData = function (sceneObj) {
     this.bg = sceneObj.bg;
+    this.sky = sceneObj.sky;
     this.blockColorType = sceneObj.blockColorType;
     this.playerSpeed = sceneObj.playerSpeed;
 

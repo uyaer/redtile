@@ -703,7 +703,7 @@
       {
         "blockList": [
           {
-            "w": 300,
+            "w": 125,
             "h": 20,
             "x": 400,
             "y": -25,
@@ -715,6 +715,26 @@
             "x": 300,
             "y": 0,
             "easing": null
+          },
+          {
+            "w": 30,
+            "h": 30,
+            "x": 650,
+            "y": 0,
+            "easing": {
+              "type":"float",
+              "range":25
+            }
+          },
+          {
+            "w": 30,
+            "h": 30,
+            "x": 750,
+            "y": 0,
+            "easing": {
+              "type":"float",
+              "range":25
+            }
           }
         ],
         "bg": "3-3.gif",
@@ -730,9 +750,32 @@
             "y": 0,
             "easing": {
               "type": "back",
-              "range": 100,
-              "time": 0.2
+              "range": 100
             }
+          },
+          {
+            "w": 30,
+            "h": 30,
+            "x": 150,
+            "y": 0,
+            "easing": {
+              "type": "back",
+              "range": 50
+            }
+          },
+          {
+            "w": 30,
+            "h": 30,
+            "x": 600,
+            "y": 0,
+            "easing": null
+          },
+          {
+            "w": 30,
+            "h": 30,
+            "x": 150,
+            "y": 0,
+            "easing": null
           }
         ],
         "bg": "3-2.gif",
@@ -849,7 +892,7 @@
           {
             "w": 30,
             "h": 40,
-            "x": 400,
+            "x": 425,
             "y": 0,
             "easing": {
               "type": "back",
@@ -2571,6 +2614,7 @@
           }
         ],
         "bg": "3-7.gif",
+        "sky":"#bdc8ff",
         "blockColorType": 0,
         "playerSpeed": "0.25"
       }
@@ -2929,7 +2973,7 @@
           {
             "w": 50,
             "h": 60,
-            "x": 150,
+            "x": 100,
             "y": 30,
             "easing": {
               "type": "float",
@@ -3207,8 +3251,7 @@
             "y": -23,
             "easing": {
               "type": "float",
-              "range": 10,
-              "time": 0.06
+              "range": 5
             }
           },
           {
@@ -3218,8 +3261,7 @@
             "y": -23,
             "easing": {
               "type": "float",
-              "range": 10,
-              "time": 0.06
+              "range": 5
             }
           },
           {
@@ -3240,22 +3282,20 @@
             "w": 20,
             "h": 20,
             "x": 240,
-            "y": -23,
+            "y": -20,
             "easing": {
               "type": "float",
-              "range": 10,
-              "time": 0.06
+              "range": 5
             }
           },
           {
             "w": 20,
             "h": 20,
             "x": 190,
-            "y": -23,
+            "y": -20,
             "easing": {
               "type": "float",
-              "range": 10,
-              "time": 0.06
+              "range": 5
             }
           },
           {
@@ -3392,13 +3432,7 @@
             "y": -20,
             "easing": null
           },
-          {
-            "w": 20,
-            "h": 20,
-            "x": 260,
-            "y": -40,
-            "easing": null
-          },
+
           {
             "w": 20,
             "h": 20,
@@ -3639,7 +3673,7 @@
             "y": 0,
             "easing": {
               "type": "back",
-              "range": 200,
+              "range": 175,
               "time": 0.25
             }
           },
@@ -3661,7 +3695,7 @@
             "y": 0,
             "easing": {
               "type": "back",
-              "range": 200,
+              "range": 150,
               "time": 0.25
             }
           }
@@ -3681,8 +3715,8 @@
         "blockList": [
           {
             "w": 20,
-            "h": 80,
-            "x": 650,
+            "h": 60,
+            "x": 700,
             "y": 0,
             "easing": {
               "type": "float",
@@ -3695,27 +3729,19 @@
             "h": 80,
             "x": 500,
             "y": 0,
-            "easing": {
-              "type": "float",
-              "range": 100,
-              "time": 0.25
-            }
+            "easing": null
           },
           {
             "w": 20,
             "h": 80,
             "x": 350,
             "y": 0,
-            "easing": {
-              "type": "float",
-              "range": 70,
-              "time": 0.25
-            }
+            "easing": null
           },
           {
             "w": 20,
-            "h": 80,
-            "x": 200,
+            "h": 60,
+            "x": 175,
             "y": 0,
             "easing": {
               "type": "float",
@@ -3745,7 +3771,7 @@
             "w": 20,
             "h": 50,
             "x": 500,
-            "y": 30,
+            "y": -30,
             "easing": {
               "type": "float",
               "range": 50,
@@ -3756,10 +3782,10 @@
             "w": 20,
             "h": 50,
             "x": 350,
-            "y": 30,
+            "y": -30,
             "easing": {
               "type": "float",
-              "range": 100,
+              "range": 20,
               "time": 0.25
             }
           },
@@ -3768,11 +3794,7 @@
             "h": 80,
             "x": 200,
             "y": -25,
-            "easing": {
-              "type": "float",
-              "range": 60,
-              "time": 0.25
-            }
+            "easing": null
           }
         ],
         "bg": "3-8.swf",

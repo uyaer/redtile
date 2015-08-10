@@ -73,6 +73,7 @@ cc.game.onStart = function(){
 
         cc.spriteFrameCache.addSpriteFrames(res.el_fire);
         cc.spriteFrameCache.addSpriteFrames(res.player);
+        cc.spriteFrameCache.addSpriteFrames(res.ui);
         AnimManager.instance.init();
 
         if(!IS_EDITOR_MODE){
