@@ -71,7 +71,6 @@ var LevelView = cc.Layer.extend({
             bg = new LevelSwfMap[bgName]();
             bg.fitBackground(this.everyH);
         } else {
-            //TODO color bg
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
             if (bg.height < this.everyH) {

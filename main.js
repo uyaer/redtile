@@ -48,7 +48,7 @@
  */
 
 cc.game.onStart = function(){
-    var IS_EDITOR_MODE = true;
+    var IS_EDITOR_MODE = false;
     cc.view.adjustViewPort(true);
     if(!IS_EDITOR_MODE){
         if(!cc.sys.isMobile){

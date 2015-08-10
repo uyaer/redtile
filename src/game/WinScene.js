@@ -48,6 +48,6 @@ var WinScene = cc.Scene.extend({
         homeBtn.setColor(hex2Color(0x5A7CBC));
         var menu = cc.Menu.create(homeBtn);
         this.addChild(menu, 10);
-        menu.setPosition(cc.p(325, App.VIEW_BOTTOM > 0 ? (App.VIEW_TOP - 75) : (App.WIN_H - 75)));
+        menu.setPosition(cc.p(325, App.WIN_H - 75));
     }
 });

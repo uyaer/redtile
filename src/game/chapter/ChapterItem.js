@@ -33,12 +33,12 @@ var ChapterItem = cc.Node.extend({
         this.resultTF.setVisible(false);
     },
     clicked: function () {
-        if (this.lv > LevelManager.instance.lastOpen) {
-            showTip("level do not open!");
-        } else {
+        //if (this.lv > LevelManager.instance.lastOpen) {
+        //    showTip("level do not open!");
+        //} else {
             LevelManager.instance.currentLevel = this.lv;
             cc.director.runScene(new GameScene());
-        }
+        //}
     }
 });
 

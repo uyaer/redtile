@@ -19,7 +19,7 @@
             <EndColor A="255" R="255" G="192" B="200" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_1" ActionTag="-181863978" Tag="41" IconVisible="False" RightMargin="-800.0000" TopMargin="-200.0000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="bg" ActionTag="-181863978" Tag="41" IconVisible="False" RightMargin="-800.0000" TopMargin="-200.0000" ctype="SpriteObjectData">
             <Size X="800.0000" Y="200.0000" />
             <AnchorPoint />
             <Position />

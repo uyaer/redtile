@@ -11,7 +11,7 @@ var MapEditor = cc.Scene.extend({
 
 
 
-        this.lv = 5;
+        this.lv = 40;
         this.init(this.lv);
 
         cc.eventManager.addListener({
@@ -77,7 +77,6 @@ var MapEditor = cc.Scene.extend({
             bg = new LevelSwfMap[bgName]();
             bg.fitBackground(this.everyH);
         } else {
-            //TODO color bg
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
             if (bg.height < this.everyH) {

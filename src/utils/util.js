@@ -138,12 +138,12 @@ function runScene(name) {
  */
 function showTip(str) {
     if (!cc.director.getRunningScene())return;
-    var tf = new cc.TextFieldTTF(str, cc.size(Const.WIN_W, 50), cc.TEXT_ALIGNMENT_CENTER, "Arial", 32);
+    var tf = new cc.TextFieldTTF(str, cc.size(App.WIN_W, 50), cc.TEXT_ALIGNMENT_CENTER, "Arial", 32);
     tf.setString(str);
-    tf.x = Const.WIN_W * 0.5;
-    tf.y = Const.WIN_H * 0.55;
+    tf.x = App.WIN_W * 0.5;
+    tf.y = App.WIN_H * 0.55;
     tf.setTextColor(hex2Color(0xff0000));
-    cc.director.getRunningScene().addChild(tf);
+    cc.director.getRunningScene().addChild(tf,1000);
     tf.runAction(cc.sequence(
         cc.moveBy(0.15, 0, -20).easing(cc.easeSineOut()),
         cc.delayTime(0.2),
@@ -293,18 +293,18 @@ function doLayout(root) {
     var length = arrayRootChildren.length;
     for (var i = 0; i < length; i++) {
         var child = arrayRootChildren[i];
-        var percentX = child.x / Const.DESIGN_W;
-        var percentY = child.y / Const.DESIGN_H;
-        child.x = percentX * Const.WIN_W;
-        child.y = percentY * Const.WIN_H;
+        var percentX = child.x / App.DESIGN_W;
+        var percentY = child.y / App.DESIGN_H;
+        child.x = percentX * App.WIN_W;
+        child.y = percentY * App.WIN_H;
         var name = child.getName();
         if (name == "mask" || name.indexOf("full") > 0) {
             if (child instanceof cc.Sprite) {
-                child.scaleX = Const.WIN_W / child.width;
-                child.scaleY = Const.WIN_H / child.height;
+                child.scaleX = App.WIN_W / child.width;
+                child.scaleY = App.WIN_H / child.height;
             } else {
-                child.width = Const.WIN_W;
-                child.height = Const.WIN_H;
+                child.width = App.WIN_W;
+                child.height = App.WIN_H;
             }
         }
     }

@@ -17,10 +17,9 @@ var LevelBase = cc.Node.extend({
         var colorbg = seekChildByName(this.mainNode, "colorbg");
         if (colorbg) {
             colorbg.height = App.WIN_H;
-        } else {
-            //if has single picture bg,set it's height fit screen
-            this.singleBg = seekChildByName(this.mainNode, "bg");
         }
+        //if has single picture bg,set it's height fit screen
+        this.singleBg = seekChildByName(this.mainNode, "bg");
 
         this.loadOver();
     },

@@ -6,12 +6,10 @@
 var App = {};
 
 
-App.GAME_W = 800;
-App.GAME_H = 560;
+App.DESIGN_W = 800;
+App.DESIGN_H = 712;
 App.WIN_W = 800;
-App.WIN_H = 960;
-App.VIEW_BOTTOM = (App.WIN_H - App.GAME_H) / 2;
-App.VIEW_TOP = App.WIN_H - App.VIEW_BOTTOM;
+App.WIN_H = 712;
 
 
 App.runScene = function (SceneClass) {
