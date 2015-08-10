@@ -73,6 +73,9 @@ var LevelView = cc.Layer.extend({
             //TODO color bg
             bg = new cc.Sprite("res/bg/" + name + ".png");
             bg.anchorX = bg.anchorY = 0;
+            if (bg.height < this.everyH) {
+                bg.scaleY = this.everyH / bg.height;
+            }
         }
         sceneNode.addChild(bg, -i);
         bg.y = -30;
