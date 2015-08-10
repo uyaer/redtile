@@ -8,3 +8,5 @@ bin
 gen
 simulator/*
 frameworks/runtime-src/proj.android/assets
+
+frameworks/runtime-src/proj.android/local.properties
