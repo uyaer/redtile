@@ -33,7 +33,9 @@ import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -92,6 +94,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 	private static native boolean nativeIsDebug();
 
+
 	/******************************************************************************
 	 * 提供给js调用的方法
 	 ****************************************************************************** 
@@ -130,5 +133,27 @@ public class AppActivity extends Cocos2dxActivity {
 				builder.create().show();
 			}
 		});
+	}
+
+	/**
+	 * 进入分享
+	 */
+	public static void showShare(final String url) {
+		// 这里一定要使用runOnUiThread
+		app.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				Uri uri = Uri.parse(url);
+				Intent it = new Intent(Intent.ACTION_VIEW, uri);
+				app.startActivity(it);
+			}
+		});
+	}
+
+	/**
+	 * 获取游戏包名称
+	 */
+	public static String getPackageURI() {
+		return app.getPackageName();
 	}
 }
