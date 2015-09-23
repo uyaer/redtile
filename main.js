@@ -47,26 +47,68 @@
  *
  */
 
-cc.game.onStart = function(){
+
+cc.game.onStart = function () {
     var IS_EDITOR_MODE = false;
     cc.view.adjustViewPort(true);
-    if(!IS_EDITOR_MODE){
-        if(!cc.sys.isMobile){
+    cc.view.enableRetina(true);
+    if (!IS_EDITOR_MODE) {
+        if (!cc.sys.isMobile) {
             cc.view.setDesignResolutionSize(400, 712, cc.ResolutionPolicy.SHOW_ALL);
-        }else{
+        } else {
             cc.view.setDesignResolutionSize(400, 712, cc.ResolutionPolicy.FIXED_WIDTH);
         }
-    }else{
+    } else {
         cc.view.setDesignResolutionSize(800, 712, cc.ResolutionPolicy.SHOW_ALL);
     }
     cc.view.resizeWithBrowserSize(true);
+    cc.director.setProjection(cc.Director.PROJECTION_2D);
+
 
     var size = cc.winSize;
     App.WIN_W = size.width;
     App.WIN_H = size.height;
 
+    if (cc.sys.language == cc.sys.LANGUAGE_CHINESE) {
+        Const.LANG = "zh";
+    } else {
+        Const.LANG = "en";
+    }
+
+    //启动时间计时器
+    TimerTicker.stepTimeRun();
+
+    //获取userid
+    gameStepVo.id = GameManager.instance.getUserId();
+    gameDataVo.id = GameManager.instance.getGameDataId();
+    //init bmob
+    Bmob.initialize("d4f5e54e80c0b1b34c7cdb47d8da877d", "2a9cf99acd19dc67a301ff9f0b4b694a");
+
     //load resources
-    cc.LoaderScene.preload(g_resources, function () {
+    if (!cc.sys.isMobile && !cc.sys.isNative) {
+        cc.LoaderScene.preload(g_resources, function () {
+            gameStart();
+        }, this);
+    } else {
+        cc.LoaderScene.preload(g_logo, function () {
+            cc.director.runScene(new LogoScene(function () {
+                gameStart();
+            }));
+        }, this);
+    }
+
+
+    function gameStart() {
+        if (!App.checkAppVertify()) {
+            return;
+        }
+
+        //获取数据
+        Net.loadGameStep();
+        Net.loadGameData();
+
+        GameManager.instance.init();
+
         L.i18n = cc.loader.getRes(res.info_zh);
 
         LevelManager.instance.initConfig();
@@ -76,11 +118,12 @@ cc.game.onStart = function(){
         cc.spriteFrameCache.addSpriteFrames(res.ui);
         AnimManager.instance.init();
 
-        if(!IS_EDITOR_MODE){
+        if (!IS_EDITOR_MODE) {
             cc.director.runScene(new ChapterScene());
-        }else{
+        } else {
             cc.director.runScene(new MapEditor());
         }
-    }, this);
+
+    }
 };
 cc.game.run();
