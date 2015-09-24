@@ -18,9 +18,16 @@
     "src/utils/map.js",
     "src/utils/util.js",
 
+    "src/plugins/bmob.js",
+
+    "src/common/Const.js",
     "src/common/Utils.js",
     "src/common/SoundsManager.js",
     "src/common/AnimManager.js",
+    "src/common/GameManager.js",
+    "src/common/TimerTicker.js",
+
+    "src/net/Net.js",
 
     "src/level/data/Easing.js",
     "src/level/data/BlockVo.js",
@@ -43,6 +50,9 @@
     "src/App.js",
 
     "src/MapEditor.js",
+
+    "src/logo/LogoScene.js",
+    "src/logo/LoadingGif.js",
 
     "src/game/LevelView.js",
     "src/game/Player.js",

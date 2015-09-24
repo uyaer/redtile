@@ -34,20 +34,24 @@ LevelManager.prototype.loadLevel = function (lv) {
     return this._levelConfig[lv];
 }
 
-LevelManager.prototype.load = function () {
+LevelManager.prototype.load = function (dataStr) {
     for (var i = 0; i < 40; i++) {
         this.levelData[i + 1] = 9999;
     }
-    var dataStr = cc.sys.localStorage.getItem("levels");
     if (!dataStr)return;
     var data = JSON.parse(dataStr);
     this.lastOpen = data.lastOpen;
     this.levelData = data.levelData;
 }
 LevelManager.prototype.save = function () {
+    GameManager.instance.saveData();
+}
+LevelManager.prototype.getSaveStr = function () {
     var data = {"lastOpen": this.lastOpen};
     data.levelData = this.levelData;
-    cc.sys.localStorage.setItem("levels", JSON.stringify(data));
+    return JSON.stringify(data);
 }
+
+
 
 LevelManager.instance = new LevelManager();

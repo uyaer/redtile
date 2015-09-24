@@ -82,7 +82,7 @@ cc.game.onStart = function () {
     gameStepVo.id = GameManager.instance.getUserId();
     gameDataVo.id = GameManager.instance.getGameDataId();
     //init bmob
-    Bmob.initialize("d4f5e54e80c0b1b34c7cdb47d8da877d", "2a9cf99acd19dc67a301ff9f0b4b694a");
+    Bmob.initialize("f3d5ed101dba9a63737e3a358ad05585", "1a01dd8eaf6e401fd4edb87b6fd12eea");
 
     //load resources
     if (!cc.sys.isMobile && !cc.sys.isNative) {
@@ -103,15 +103,12 @@ cc.game.onStart = function () {
             return;
         }
 
+        L.i18n = cc.loader.getRes(res.info_zh);
+        LevelManager.instance.initConfig();
+
         //获取数据
         Net.loadGameStep();
         Net.loadGameData();
-
-        GameManager.instance.init();
-
-        L.i18n = cc.loader.getRes(res.info_zh);
-
-        LevelManager.instance.initConfig();
 
         cc.spriteFrameCache.addSpriteFrames(res.el_fire);
         cc.spriteFrameCache.addSpriteFrames(res.player);

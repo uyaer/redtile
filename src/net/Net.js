@@ -19,12 +19,12 @@ var GameStepVo = Bmob.Object.extend("GameStep", {
      * 当前步数
      * @type {number}
      */
-    step: 100,
+    step: 50,
     /**
      * 最大步数
      * @type {number}
      */
-    maxStep: 100,
+    maxStep: 50,
     /**
      * 上一次恢复时间
      * @type {number}
@@ -34,7 +34,7 @@ var GameStepVo = Bmob.Object.extend("GameStep", {
      * 多少毫秒回复一步
      * @type {number}
      */
-    perUpdate: 60000,
+    perUpdate: 300000,
     /**
      * 创建数据
      */

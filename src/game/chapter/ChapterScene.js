@@ -113,7 +113,6 @@ var ChapterScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
 
-        App.hideBannerAd();
         SoundsManager.instance.playMusic();
         var lastOpenIndex = LevelManager.instance.lastOpen - 1;
         var page = int(lastOpenIndex / 12);
