@@ -8,7 +8,7 @@ var ChapterItem = cc.Node.extend({
         this.addChild(bg);
         this.bg = bg;
 
-        var lvTF = new cc.LabelBMFont(L.i18n["LEVEL_n"].replace("{0}", lv), FONT);
+        var lvTF = new cc.LabelBMFont(Lang.i18n(8).replace("{0}", lv), FONT);//LEVEL_n
         lvTF.y = 60;
         lvTF.scale = 0.65;
         this.addChild(lvTF);
@@ -33,12 +33,16 @@ var ChapterItem = cc.Node.extend({
         this.resultTF.setVisible(false);
     },
     clicked: function () {
-        //if (this.lv > LevelManager.instance.lastOpen) {
-        //    showTip("level do not open!");
-        //} else {
-            LevelManager.instance.currentLevel = this.lv;
-            cc.director.runScene(new GameScene());
-        //}
+        if (this.lv > LevelManager.instance.lastOpen) {
+            showTip(Lang.i18n(14));//关卡未开放
+        } else {
+            if (gameStepVo.step > 0) {
+                LevelManager.instance.currentLevel = this.lv;
+                cc.director.runScene(new GameScene());
+            } else {
+                cc.eventManager.dispatchCustomEvent(GameEvent.SHOW_BUY_HP);
+            }
+        }
     }
 });
 

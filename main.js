@@ -66,8 +66,10 @@ cc.game.onStart = function () {
 
 
     var size = cc.winSize;
-    App.WIN_W = size.width;
-    App.WIN_H = size.height;
+    App.DESIGN_W = Const.DESIGN_W = 400;
+    App.DESIGN_H = Const.DESIGN_H = 712;
+    App.WIN_W = Const.WIN_W = size.width;
+    App.WIN_H = Const.WIN_H = size.height;
 
     if (cc.sys.language == cc.sys.LANGUAGE_CHINESE) {
         Const.LANG = "zh";
@@ -103,7 +105,7 @@ cc.game.onStart = function () {
             return;
         }
 
-        L.i18n = cc.loader.getRes(res.info_zh);
+        Lang.init();
         LevelManager.instance.initConfig();
 
         //获取数据
@@ -116,7 +118,7 @@ cc.game.onStart = function () {
         AnimManager.instance.init();
 
         if (!IS_EDITOR_MODE) {
-            cc.director.runScene(new ChapterScene());
+            cc.director.runScene(new IndexScene());
         } else {
             cc.director.runScene(new MapEditor());
         }

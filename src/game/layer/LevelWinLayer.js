@@ -37,8 +37,8 @@ var LevelWinLayer = cc.Layer.extend({
 
     updateTF: function () {
         var lv = LevelManager.instance.currentLevel - 1;
-        this.titleTF.setString(L.i18n["level_complete"].replace("{0}", lv));
-        this.deadTF.setString(L.i18n["Best Result:"].replace("{0}", LevelManager.instance.levelData[lv]));
+        this.titleTF.setString(Lang.i18n(3).replace("{0}", lv));//level_complete
+        this.deadTF.setString(Lang.i18n(4).replace("{0}", LevelManager.instance.levelData[lv]));//Best Result:
     },
 
     onTouchBeganHandler: function () {

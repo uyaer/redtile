@@ -32,7 +32,6 @@
  */
 cc.LoaderScene = cc.Scene.extend({
     _interval : null,
-    _label : null,
     _className:"LoaderScene",
     cb: null,
     target: null,
@@ -41,62 +40,30 @@ cc.LoaderScene = cc.Scene.extend({
      * @returns {boolean}
      */
     init : function(){
-        var self = this;
+        var that = this;
 
-        //logo
-        var logoWidth = 160;
-        var logoHeight = 200;
+        var bg = new cc.Sprite(res.logo_bg);
+        bg.name = "logo_bg";
+        bg.anchorX = bg.anchorY = 0;
+        bg.scaleX = Const.WIN_W / 128;
+        bg.scaleY = Const.WIN_H / 128;
+        this.addChild(bg);
 
-        // bg
-        var bgLayer = self._bgLayer = new cc.LayerColor(cc.color(32, 32, 32, 255));
-        self.addChild(bgLayer, 0);
-
-        //image move to CCSceneFile.js
-        var fontSize = 24, lblHeight =  -logoHeight / 2 + 100;
-        if(cc._loaderImage){
-            //loading logo
-            cc.loader.loadImg(cc._loaderImage, {isCrossOrigin : false }, function(err, img){
-                logoWidth = img.width;
-                logoHeight = img.height;
-                self._initStage(img, cc.visibleRect.center);
-            });
-            fontSize = 14;
-            lblHeight = -logoHeight / 2 - 10;
-        }
-        //loading percent
-        var label = self._label = new cc.LabelTTF("Loading... 0%", "Arial", fontSize);
-        label.setPosition(cc.pAdd(cc.visibleRect.center, cc.p(0, lblHeight)));
-        label.setColor(cc.color(180, 180, 180));
-        bgLayer.addChild(this._label, 10);
+        var icon = new cc.Sprite(res.logo);
+        icon.name = "logo";
+        icon.anchorX = 96 / 149;
+        icon.anchorY = 0;
+        icon.x = Const.WIN_W / 2 - 10;
+        icon.y = Const.WIN_H/2 + 102;
+        this.addChild(icon);
         return true;
-    },
-
-    _initStage: function (img, centerPos) {
-        var self = this;
-        var texture2d = self._texture2d = new cc.Texture2D();
-        texture2d.initWithElement(img);
-        texture2d.handleLoadedTexture();
-        var logo = self._logo = new cc.Sprite(texture2d);
-        logo.setScale(cc.contentScaleFactor());
-        logo.x = centerPos.x;
-        logo.y = centerPos.y;
-        self._bgLayer.addChild(logo, 10);
     },
     /**
      * custom onEnter
      */
     onEnter: function () {
-        var self = this;
-        cc.Node.prototype.onEnter.call(self);
-        self.schedule(self._startLoading, 0.3);
-    },
-    /**
-     * custom onExit
-     */
-    onExit: function () {
-        cc.Node.prototype.onExit.call(this);
-        var tmpStr = "Loading... 0%";
-        this._label.setString(tmpStr);
+        this._super();
+        this.schedule(this._startLoading, 0.3);
     },
 
     /**
@@ -119,9 +86,6 @@ cc.LoaderScene = cc.Scene.extend({
         var res = self.resources;
         cc.loader.load(res,
             function (result, count, loadedCount) {
-                var percent = (loadedCount / count * 100) | 0;
-                percent = Math.min(percent, 100);
-                self._label.setString("Loading... " + percent + "%");
             }, function () {
                 if (self.cb)
                     self.cb.call(self.target);

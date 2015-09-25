@@ -1,0 +1,258 @@
+{
+  "ID": "d9ff6942-0e9f-40f4-8548-a4dbc332dfe0",
+  "Version": "2.3.2.3",
+  "Name": "title_zh",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 14,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/title1.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -80.9277,
+              "Y": 50.2346
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -131.9277,
+            "RightMargin": 29.9277,
+            "TopMargin": -101.2346,
+            "BottomMargin": -0.7654,
+            "Tag": 15,
+            "ActionTag": 407522808,
+            "Size": {
+              "X": 102.0,
+              "Y": 102.0
+            },
+            "Name": "title1_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/title2.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 78.8532,
+              "Y": 50.2338
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 27.8532,
+            "RightMargin": -129.8532,
+            "TopMargin": -101.2338,
+            "BottomMargin": -0.7662,
+            "Tag": 16,
+            "ActionTag": 1175527689,
+            "Size": {
+              "X": 102.0,
+              "Y": 102.0
+            },
+            "Name": "title2_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/title3.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -122.3231,
+              "Y": -61.9588
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -165.3231,
+            "RightMargin": 79.3231,
+            "TopMargin": 18.9588,
+            "BottomMargin": -104.9588,
+            "Tag": 17,
+            "ActionTag": 2125904707,
+            "Size": {
+              "X": 86.0,
+              "Y": 86.0
+            },
+            "Name": "title3_3",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/title4.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -0.7324,
+              "Y": -61.9588
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -43.7324,
+            "RightMargin": -42.2676,
+            "TopMargin": 18.9588,
+            "BottomMargin": -104.9588,
+            "Tag": 18,
+            "ActionTag": -1977047009,
+            "Size": {
+              "X": 86.0,
+              "Y": 86.0
+            },
+            "Name": "title4_4",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/title5.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 120.8583,
+              "Y": -61.9588
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 77.8583,
+            "RightMargin": -163.8583,
+            "TopMargin": 18.9588,
+            "BottomMargin": -104.9588,
+            "Tag": 19,
+            "ActionTag": 1710279332,
+            "Size": {
+              "X": 86.0,
+              "Y": 86.0
+            },
+            "Name": "title5_5",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "index.plist",
+        "index.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

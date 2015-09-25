@@ -1,0 +1,168 @@
+{
+  "ID": "b930ac99-f6ec-4098-9c81-08fd7e054e56",
+  "Version": "2.3.2.3",
+  "Name": "title_en",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 33,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/donot.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -66.9189,
+              "Y": 68.974
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -166.4189,
+            "RightMargin": -32.5811,
+            "TopMargin": -99.974,
+            "BottomMargin": 37.974,
+            "Tag": 34,
+            "ActionTag": 531077605,
+            "Size": {
+              "X": 199.0,
+              "Y": 62.0
+            },
+            "Name": "donot_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/touch.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 62.8116,
+              "Y": 10.3784
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -29.1884,
+            "RightMargin": -154.8116,
+            "TopMargin": -35.8784,
+            "BottomMargin": -15.1216,
+            "Tag": 35,
+            "ActionTag": -1144396826,
+            "Size": {
+              "X": 184.0,
+              "Y": 51.0
+            },
+            "Name": "touch_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/redtile.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1.2978,
+              "Y": -49.2973
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -179.7022,
+            "RightMargin": -182.2978,
+            "TopMargin": 28.7973,
+            "BottomMargin": -69.7973,
+            "Tag": 36,
+            "ActionTag": 449466938,
+            "Size": {
+              "X": 362.0,
+              "Y": 41.0
+            },
+            "Name": "redtile_3",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "index.plist",
+        "index.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

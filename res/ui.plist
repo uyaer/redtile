@@ -4,21 +4,10 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>ui/bb.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1,380},{400,154}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{400,154}</string>
-			</dict>
 			<key>ui/home.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{706,1},{106,106}}</string>
+				<string>{{362,1},{106,106}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -29,7 +18,7 @@
 			<key>ui/item.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{706,143},{25,25}}</string>
+				<string>{{362,282},{25,25}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -40,7 +29,7 @@
 			<key>ui/music_close.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,288},{70,83}}</string>
+				<string>{{470,1},{70,83}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -51,7 +40,7 @@
 			<key>ui/music_open.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{434,288},{70,83}}</string>
+				<string>{{362,163},{70,83}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -62,7 +51,7 @@
 			<key>ui/next.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,1},{342,177}}</string>
+				<string>{{1,380},{342,177}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,7 +62,7 @@
 			<key>ui/pause.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{640,180},{170,200}}</string>
+				<string>{{345,380},{170,200}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,7 +73,7 @@
 			<key>ui/quadbg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{706,109},{32,32}}</string>
+				<string>{{362,248},{32,32}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -95,7 +84,7 @@
 			<key>ui/share.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,180},{276,106}}</string>
+				<string>{{1,559},{276,106}}</string>
 				<key>offset</key>
 				<string>{1,0}</string>
 				<key>rotated</key>
@@ -114,6 +103,28 @@
 				<key>sourceSize</key>
 				<string>{360,378}</string>
 			</dict>
+			<key>ui/hp.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{279,559},{40,34}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{40,35}</string>
+			</dict>
+			<key>ui/button.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{362,109},{120,52}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{120,52}</string>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>
@@ -124,14 +135,14 @@
 			<key>realTextureFileName</key>
 			<string>ui.png</string>
 			<key>size</key>
-			<string>{813,535}</string>
+			<string>{541,666}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>813</integer>
+			<integer>541</integer>
 			<key>height</key>
-			<integer>535</integer>
+			<integer>666</integer>
 		</dict>
 	</dict>
 </plist>

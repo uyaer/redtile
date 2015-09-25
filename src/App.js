@@ -6,9 +6,9 @@
 var App = {};
 
 
-App.DESIGN_W = 800;
+App.DESIGN_W = 400;
 App.DESIGN_H = 712;
-App.WIN_W = 800;
+App.WIN_W = 400;
 App.WIN_H = 712;
 
 
@@ -21,10 +21,6 @@ var ANIM_DEAD = "player_dead";
 var ANIM_HUICHENG = "huicheng";
 var ANIM_FIRE = "fire_";
 
-
-
-var L = {};
-L.i18n = {};
 
 var LevelSwfMap = {
     "1-1.swf": Level1,
@@ -90,5 +86,16 @@ App.showShare = function () {
         jsb.reflection.callStaticMethod(App.__android_class, "showShare", "(Ljava/lang/String;)V", url);
     } else {
         window.open(url);
+    }
+}
+
+App.showCpAd = function () {
+    if (cc.sys.isNative) {
+        jsb.reflection.callStaticMethod(App.__android_class, "showCpAd", "()V");
+    }
+}
+App.hideCpAd = function () {
+    if (cc.sys.isNative) {
+        jsb.reflection.callStaticMethod(App.__android_class, "hideCpAd", "()V");
     }
 }

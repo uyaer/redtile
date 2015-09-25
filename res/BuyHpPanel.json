@@ -1,0 +1,421 @@
+{
+  "ID": "6906786f-c615-42c5-b6f6-50c53d6f3d37",
+  "Version": "2.3.2.3",
+  "Name": "BuyHpPanel",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 51,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 52,
+            "ActionTag": 1884488760,
+            "Size": {
+              "X": 400.0,
+              "Y": 712.0
+            },
+            "Name": "mask",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "ui/next.png",
+              "Plist": "ui.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 112,
+            "Scale9OriginY": 88,
+            "Scale9Width": 118,
+            "Scale9Height": 61,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 200.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5056
+            },
+            "PreSize": {
+              "X": 0.855,
+              "Y": 0.389
+            },
+            "LeftMargin": 29.0,
+            "RightMargin": 29.0,
+            "TopMargin": 213.5,
+            "BottomMargin": 221.5,
+            "Tag": 53,
+            "Children": [
+              {
+                "FontSize": 32,
+                "LabelText": "提醒",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 173.4025,
+                  "Y": 235.3572
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.507,
+                  "Y": 0.8497
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 141.4025,
+                "RightMargin": 136.5975,
+                "TopMargin": 25.1428,
+                "BottomMargin": 218.8572,
+                "Tag": 54,
+                "ActionTag": -1828048756,
+                "Size": {
+                  "X": 64.0,
+                  "Y": 33.0
+                },
+                "Name": "titleTF",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 26,
+                "ButtonText": "取消",
+                "TextColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "ui/button.png",
+                  "Plist": "ui.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 90,
+                "Scale9Height": 30,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 248.1179,
+                  "Y": 40.4669
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 182,
+                  "G": 193,
+                  "B": 175
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7255,
+                  "Y": 0.1461
+                },
+                "PreSize": {
+                  "X": 0.3,
+                  "Y": 0.073
+                },
+                "LeftMargin": 188.1179,
+                "RightMargin": 33.8821,
+                "TopMargin": 210.5331,
+                "BottomMargin": 14.4669,
+                "Tag": 59,
+                "ActionTag": 1834029302,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 52.0
+                },
+                "Name": "cancelBtn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 26,
+                "ButtonText": "OK",
+                "TextColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "ui/button.png",
+                  "Plist": "ui.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 90,
+                "Scale9Height": 30,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 90.4622,
+                  "Y": 40.6231
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 73,
+                  "G": 179,
+                  "B": 12
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2645,
+                  "Y": 0.1467
+                },
+                "PreSize": {
+                  "X": 0.3,
+                  "Y": 0.073
+                },
+                "LeftMargin": 30.4622,
+                "RightMargin": 191.5378,
+                "TopMargin": 210.3769,
+                "BottomMargin": 14.6231,
+                "Tag": 58,
+                "ActionTag": -1161691699,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 52.0
+                },
+                "Name": "okBtn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 20,
+                "LabelText": "（点击广告也可免费获得行动力）",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 169.212,
+                  "Y": 115.6223
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 121,
+                  "G": 171,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4948,
+                  "Y": 0.4174
+                },
+                "PreSize": {
+                  "X": 0.75,
+                  "Y": 0.0843
+                },
+                "LeftMargin": 19.212,
+                "RightMargin": 22.788,
+                "TopMargin": 161.3777,
+                "BottomMargin": 55.6223,
+                "Tag": 56,
+                "ActionTag": 1662098447,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 60.0
+                },
+                "Name": "tip2TF",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "没有行动力了，只要1元可以恢复满哦\n\n",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 173.4312,
+                  "Y": 186.0946
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 232,
+                  "G": 18,
+                  "B": 18
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5071,
+                  "Y": 0.6718
+                },
+                "PreSize": {
+                  "X": 0.75,
+                  "Y": 0.1124
+                },
+                "LeftMargin": 23.4312,
+                "RightMargin": 18.5688,
+                "TopMargin": 90.9054,
+                "BottomMargin": 106.0946,
+                "Tag": 55,
+                "ActionTag": -1465239865,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 80.0
+                },
+                "Name": "tipTF",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1745660066,
+            "Size": {
+              "X": 342.0,
+              "Y": 277.0
+            },
+            "Name": "panel",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 400.0,
+          "Y": 712.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "ui.plist",
+        "ui.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

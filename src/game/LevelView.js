@@ -244,7 +244,7 @@ var LevelView = cc.Layer.extend({
 
         //更新界面
         this.control.updateLevel();
-        this.control.updateDead(this.deadCount);
+        this.control.updateDead();
     },
 
     pauseGame: function () {
@@ -262,7 +262,14 @@ var LevelView = cc.Layer.extend({
     restart: function () {
         this.unscheduleUpdate();
         this.deadCount++;
-        this.start();
+        gameStepVo.step--;
+        gameStepVo.saveToRemote();
+        if (gameStepVo.step > 0) {
+            this.start();
+        } else {
+            //没有生命了
+            this.parent.addChild(new BuyHpPanel(), 100);
+        }
     },
 
     onTouchBeganHandler: function () {

@@ -16,7 +16,7 @@ var WinScene = cc.Scene.extend({
         win.setPosition(cc.p(App.WIN_W / 2 - 15, App.WIN_H / 2));
         this.addChild(win);
 
-        var deadTF = bitmapText(L.i18n["Total Dead!"]);
+        var deadTF = bitmapText(Lang.i18n(6));//Total Dead!
         deadTF.setAnchorPoint(cc.p(0.5, 1));
         deadTF.setPosition(cc.p(App.WIN_W / 2, App.WIN_H / 2 - 50));
         this.addChild(deadTF);
@@ -31,7 +31,7 @@ var WinScene = cc.Scene.extend({
         deadCountTF.setPosition(cc.p(App.WIN_W / 2, App.WIN_H / 2 - 90));
         this.addChild(deadCountTF);
 
-        var tip = bitmapText(L.i18n["You are a great sire!"]);
+        var tip = bitmapText(Lang.i18n(7));//You are a great sire!
         tip.setPosition(cc.p(App.WIN_W / 2, App.WIN_H / 2 - 157));
         tip.setScale(0.9);
         this.addChild(tip);

@@ -21,8 +21,8 @@ var res = {
 
     cbg: "res/cbg.png",
     complete_eff: "res/complete_eff.plist",
-    info_zh: "res/info_zh.json",
     data: "res/data.json",
+    lang_data: "res/i18n/data.json",
 
     level1: "res/Level1.json",
     level2: "res/Level2.json",
@@ -34,6 +34,11 @@ var res = {
     level8: "res/Level8.json",
     level9: "res/Level9.json",
     level10: "res/Level10.json",
+
+    scene_index: "res/IndexScene.json",
+    layer_buy_hp: "res/BuyHpPanel.json",
+    node_title_zh: "res/title_zh.json",
+    node_title_en: "res/title_en.json",
 
     bg_1_1:"res/bg/1-1.png",
     bg_1_2:"res/bg/1-2.png",

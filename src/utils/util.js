@@ -85,6 +85,9 @@ function hex2Color(val) {
 function randomInt(min, max) {
     return min + Math.round(Math.random() * (max - min));
 }
+function randomFloat(min, max) {
+    return min + Math.random() * (max - min);
+}
 
 /**
  * 约束val范围值
@@ -332,6 +335,24 @@ function seekChildByName(root, name) {
     return null;
 }
 
+/**
+ * 屏蔽触摸事件
+ * @param node {cc.Node}
+ */
+function maskTouchEvent(node){
+    cc.eventManager.addListener({
+        event:cc.EventListener.TOUCH_ONE_BY_ONE,
+        swallowTouches:true,
+        /**
+         * @param touch {cc.Touch}
+         * @param event {cc.Event}
+         */
+        onTouchBegan: function (touch, event) {
+            event.stopPropagation();
+            return true;
+        }
+    },node);
+}
 
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////     文字工具    ///////////////////////////////
@@ -440,6 +461,37 @@ function seekChildByName(root, name) {
         } else {
             isShaking = false;
         }
+    }
+
+    /**
+     * 晃动
+     * @param node {cc.Node}
+     * @param min
+     * @param max
+     */
+    shake.randomShakeLoop = function (node, min, max, ox, oy) {
+        min = min || 2;
+        max = max || 5;
+        var offsetX = randomInt(min, max);
+        var offsetY = randomInt(min, max);
+        if (Math.random() < 0.5)offsetX *= -1;
+        if (Math.random() < 0.5)offsetY *= -1;
+        ox = ox || node.x;
+        oy = oy || node.y;
+
+        node.runAction(cc.sequence(
+            cc.moveTo(randomFloat(0.3, 0.4), ox + offsetX, oy + offsetY),
+            cc.callFunc(function () {
+                shake.randomShakeLoop(node, min, max, ox, oy);
+            }, this)
+        ));
+    }
+    /**
+     * 停止晃动
+     * @param node
+     */
+    shake.stopRandomShake = function (node) {
+        node.stopAllActions();
     }
 
     $["shake"] = shake;

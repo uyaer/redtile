@@ -1,5 +1,5 @@
 <Solution>
-  <PropertyGroup Name="redtile" Version="2.3.1.2" Type="CocosStudio" />
+  <PropertyGroup Name="redtile" Version="2.3.2.3" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
@@ -118,7 +118,6 @@
           <Fnt Name="font.fnt" />
         </Folder>
         <Folder Name="ui">
-          <Image Name="bb.png" />
           <Image Name="item.png" />
           <Image Name="music_close.png" />
           <Image Name="music_open.png" />
@@ -128,6 +127,8 @@
           <Image Name="share.png" />
           <Image Name="win.png" />
           <Image Name="home.png" />
+          <Image Name="hp.png" />
+          <Image Name="button.png" />
         </Folder>
         <Project Name="Level1.csd" Type="Node" />
         <Project Name="Level2.csd" Type="Node" />
@@ -141,6 +142,27 @@
         <Project Name="Level10.csd" Type="Node" />
         <PlistInfo Name="ui.csi" Type="Plist" />
         <Image Name="cbg.png" />
+        <Folder Name="index">
+          <Image Name="donot.png" />
+          <Image Name="go.png" />
+          <Image Name="index_bottom.png" />
+          <Image Name="index_boy.png" />
+          <Image Name="index_girl.png" />
+          <Image Name="light.png" />
+          <Image Name="redtile.png" />
+          <Image Name="title1.png" />
+          <Image Name="title2.png" />
+          <Image Name="title3.png" />
+          <Image Name="title4.png" />
+          <Image Name="title5.png" />
+          <Image Name="touch.png" />
+          <Image Name="index_bg.jpg" />
+        </Folder>
+        <PlistInfo Name="index.csi" Type="Plist" />
+        <Project Name="IndexScene.csd" Type="Scene" />
+        <Project Name="title_zh.csd" Type="Node" />
+        <Project Name="title_en.csd" Type="Node" />
+        <Project Name="BuyHpPanel.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

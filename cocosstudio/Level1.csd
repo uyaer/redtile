@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Node" Name="Level1" ID="937173a6-9273-40d5-a5c5-59e2d9aee040" Version="2.3.1.2" />
+  <PropertyGroup Type="Node" Name="Level1" ID="937173a6-9273-40d5-a5c5-59e2d9aee040" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />

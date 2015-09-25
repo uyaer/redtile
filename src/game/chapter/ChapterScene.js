@@ -81,7 +81,7 @@ var ChapterScene = cc.Scene.extend({
             onTouchesEnded: this.onTouchesEndedHandler.bind(this)
         }, this);
 
-        if(cc.sys.isNative){
+        if (cc.sys.isNative) {
             cc.eventManager.addListener({
                 event: cc.EventListener.KEYBOARD,
                 onKeyReleased: this.onKeyClicked.bind(this)
@@ -118,12 +118,20 @@ var ChapterScene = cc.Scene.extend({
         var page = int(lastOpenIndex / 12);
         this.pageIndex = page;
         this.scroll.setContentOffsetInDuration(cc.p(-App.WIN_W * page, 0), 0.35 * page);
+
+        cc.eventManager.addCustomListener(GameEvent.SHOW_BUY_HP, this.showBuyHpPanel.bind(this));
     },
     onExit: function () {
         this._super();
 
         SoundsManager.instance.stopAll();
+        cc.eventManager.removeCustomListeners(GameEvent.SHOW_BUY_HP);
     },
+
+    showBuyHpPanel: function () {
+        this.addChild(new BuyHpPanel(), 100);
+    },
+
     onTouchesBeganHandler: function (touches, event) {
         if (touches.length > 0) {
             var touch = touches[0];

@@ -2,6 +2,10 @@
  * ��ͣ
  */
 var PauseLayer = cc.Layer.extend({
+    /**
+     * @type cc.LabelTTF
+     */
+    timeTF: null,
     ctor: function (control) {
         this._super();
 
@@ -15,7 +19,7 @@ var PauseLayer = cc.Layer.extend({
         sp.y = App.WIN_H * 0.5;
         this.addChild(sp);
 
-        var tipTF = bitmapText(L.i18n["Tip_Resume"]);
+        var tipTF = bitmapText(Lang.i18n(5));//Tip_Resume
         tipTF.setAlignment(cc.TEXT_ALIGNMENT_CENTER);
         tipTF.setAnchorPoint(cc.p(0.5, 1));
         tipTF.setPosition(cc.p(App.WIN_W * 0.5, App.WIN_H * 0.5 - 10));
@@ -29,6 +33,13 @@ var PauseLayer = cc.Layer.extend({
         this.addChild(menu, 10);
         menu.x = App.WIN_W - homeBtn.width * 0.5 - 10;
         menu.y = homeBtn.height * 0.5 + 10;
+
+        //恢复时间
+        var timeTF = new cc.LabelTTF("", "Arial", 32);
+        timeTF.x = Const.WIN_W * 0.5;
+        timeTF.y = Const.WIN_H * 0.75;
+        this.addChild(timeTF);
+        this.timeTF = timeTF;
 
         //event
         cc.eventManager.addListener({
@@ -45,9 +56,34 @@ var PauseLayer = cc.Layer.extend({
      */
     onTouchBeganHandler: function (touche, event) {
         event.stopPropagation();
-        
+
         this.control.resumeGame();
         this.removeFromParent(false);
         return true;
+    },
+
+    onEnter: function () {
+        this._super();
+
+        this.updateTimeTF();
+        this.schedule(this.updateTimeTF.bind(this), 1, Number.MAX_VALUE);
+    },
+
+    onExit: function () {
+        this._super();
+
+        this.unschedule(this.updateTimeTF);
+    },
+
+    /**
+     * 更新时间tf
+     */
+    updateTimeTF: function () {
+        var time = TimerTicker.getNeedTime();
+        time = Math.round(time / 1000);
+        var m = int(time / 60);
+        var s = time % 60;
+        var timeStr = m + ":" + (s < 10 ? "0" + s : s);
+        this.timeTF.string = Lang.i18n(15).replace("{0}", timeStr);
     }
 });

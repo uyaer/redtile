@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Node" Name="Level2" ID="aa638e9b-c4dd-4469-83e5-bdd93f3c00a4" Version="2.3.1.2" />
+  <PropertyGroup Type="Node" Name="Level2" ID="aa638e9b-c4dd-4469-83e5-bdd93f3c00a4" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -30,7 +30,7 @@
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="255" G="120" B="143" />
             <EndColor A="255" R="255" G="158" B="139" />
-            <ColorVector ScaleX="0.0000" ScaleY="-1.0000" />
+            <ColorVector ScaleY="-1.0000" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

@@ -7,10 +7,10 @@ var TutorialLayer = cc.Layer.extend({
 
         this.control = control;
 
-        var bg = new cc.LayerColor(cc.color(0,0,0,125), App.WIN_W, App.WIN_H);
+        var bg = new cc.LayerColor(cc.color(0, 0, 0, 125), App.WIN_W, App.WIN_H);
         this.addChild(bg);
 
-        var titleTF = bitmapText(L.i18n["Tap Start!"]);
+        var titleTF = bitmapText(Lang.i18n(2));//Tap Start!
         titleTF.setAlignment(cc.TEXT_ALIGNMENT_CENTER);
         titleTF.setAnchorPoint(cc.p(0.5, 0.5));
         titleTF.setPosition(cc.p(App.WIN_W / 2, App.WIN_H / 2));
@@ -27,7 +27,7 @@ var TutorialLayer = cc.Layer.extend({
      * @param event {cc.Event}
      * @returns {boolean}
      */
-    onTouchBeganHandler: function (touch,event) {
+    onTouchBeganHandler: function (touch, event) {
         event.stopPropagation();
 
         this.control.resumeGame();

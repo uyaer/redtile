@@ -30,6 +30,8 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 
+import com.uyaer.myprincess.R;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -94,7 +96,6 @@ public class AppActivity extends Cocos2dxActivity {
 
 	private static native boolean nativeIsDebug();
 
-
 	/******************************************************************************
 	 * 提供给js调用的方法
 	 ****************************************************************************** 
@@ -109,27 +110,30 @@ public class AppActivity extends Cocos2dxActivity {
 			@Override
 			public void run() {
 				AlertDialog.Builder builder = new AlertDialog.Builder(app);
-				builder.setMessage("确认退出吗？");
-				builder.setTitle("提示");
-				builder.setPositiveButton("确认", new OnClickListener() {
-					@Override
-					public void onClick(DialogInterface arg0, int arg1) {
-						// 一定要在GL线程中执行
-						app.runOnGLThread(new Runnable() {
+				builder.setMessage(app.getString(R.string.exit_tip));
+				builder.setTitle(app.getString(R.string.alert));
+				builder.setPositiveButton(app.getString(R.string.ok),
+						new OnClickListener() {
 							@Override
-							public void run() {
-								Cocos2dxJavascriptJavaBridge
-										.evalString("App.closeApp()");
+							public void onClick(DialogInterface arg0, int arg1) {
+								// 一定要在GL线程中执行
+								app.runOnGLThread(new Runnable() {
+									@Override
+									public void run() {
+										Cocos2dxJavascriptJavaBridge
+												.evalString("App.closeApp()");
+									}
+								});
 							}
 						});
-					}
-				});
-				builder.setNegativeButton("取消", new OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				});
+				builder.setNegativeButton(app.getString(R.string.cancel),
+						new OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.dismiss();
+							}
+						});
 				builder.create().show();
 			}
 		});

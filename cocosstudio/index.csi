@@ -1,0 +1,19 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Type="Plist" Name="index" ID="439a59e0-428d-4106-a3a4-2fb5f8bd5ff6" Version="2.3.2.3" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="index/donot.png" />
+      <FilePathData Path="index/go.png" />
+      <FilePathData Path="index/index_bottom.png" />
+      <FilePathData Path="index/index_girl.png" />
+      <FilePathData Path="index/redtile.png" />
+      <FilePathData Path="index/title1.png" />
+      <FilePathData Path="index/title2.png" />
+      <FilePathData Path="index/title3.png" />
+      <FilePathData Path="index/title4.png" />
+      <FilePathData Path="index/title5.png" />
+      <FilePathData Path="index/touch.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

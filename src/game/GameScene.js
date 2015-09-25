@@ -60,13 +60,18 @@ var GameScene = cc.Scene.extend({
         this.addChild(topLayer, 10);
         var viewTop = App.WIN_H - 30;
 
-        var deadCountTF = bitmapText("0");
-        deadCountTF.setAlignment(cc.TEXT_ALIGNMENT_LEFT);
-        deadCountTF.setAnchorPoint(cc.p(0, 0.5));
-        deadCountTF.setPosition(cc.p(10, viewTop));
-        deadCountTF.setColor(hex2Color(0x5A7CBC));
-        topLayer.addChild(deadCountTF);
-        this.deadCountTF = deadCountTF;
+        var hpIcon = new cc.Sprite("#ui/hp.png");
+        hpIcon.x = 22;
+        hpIcon.y = viewTop;
+        topLayer.addChild(hpIcon);
+
+        var hpTF = bitmapText(""+gameStepVo.step);
+        hpTF.setAlignment(cc.TEXT_ALIGNMENT_LEFT);
+        hpTF.setAnchorPoint(cc.p(0, 0.5));
+        hpTF.setPosition(cc.p(50, viewTop));
+        hpTF.setColor(hex2Color(0x5A7CBC));
+        topLayer.addChild(hpTF);
+        this.deadCountTF = hpTF;
 
         var levelTF = bitmapText("1/40");
         levelTF.setPosition(cc.p(App.WIN_W / 2, viewTop));
@@ -75,7 +80,7 @@ var GameScene = cc.Scene.extend({
         this.levelTF = levelTF;
 
         //=========pause==========
-        var pauseTF = new cc.MenuItemLabel(bitmapText(L.i18n["PAUSE"]), this.showPause, this);
+        var pauseTF = new cc.MenuItemLabel(bitmapText(Lang.i18n(1)), this.showPause, this);//PAUSE
         pauseTF.setColor(hex2Color(0x5A7CBC));
         var menu = new cc.Menu(pauseTF);
         menu.x = 350;
@@ -107,7 +112,7 @@ var GameScene = cc.Scene.extend({
     },
 
     updateDead: function (count) {
-        this.deadCountTF.setString((count > 0 ? "-" : "") + count);
+        this.deadCountTF.setString(gameStepVo.step+"");
     },
 
     showLevelComplete: function () {

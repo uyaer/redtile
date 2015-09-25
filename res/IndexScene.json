@@ -1,0 +1,357 @@
+{
+  "ID": "a37fdb8c-13ca-4605-95c9-f0e2280b78d7",
+  "Version": "2.3.2.3",
+  "Name": "IndexScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 7,
+        "Children": [
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 247,
+              "G": 252
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 8,
+            "ActionTag": 1839076310,
+            "Size": {
+              "X": 400.0,
+              "Y": 712.0
+            },
+            "Name": "colorbg",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "index/index_bg.jpg",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 46.0001
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0646
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "TopMargin": -2.0001,
+            "BottomMargin": 46.0001,
+            "Tag": 10,
+            "ActionTag": 448758766,
+            "Size": {
+              "X": 400.0,
+              "Y": 668.0
+            },
+            "Name": "index_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/index_girl.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 81.5054,
+              "Y": 113.6502
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2038,
+              "Y": 0.1596
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -10.4946,
+            "RightMargin": 226.4946,
+            "TopMargin": 485.3498,
+            "BottomMargin": 0.6502,
+            "Tag": 12,
+            "ActionTag": 849970990,
+            "Size": {
+              "X": 184.0,
+              "Y": 226.0
+            },
+            "Name": "girl",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "index/index_boy.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 228.3867,
+              "Y": 253.853
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.571,
+              "Y": 0.3565
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -21.1133,
+            "RightMargin": -77.8867,
+            "TopMargin": 232.647,
+            "BottomMargin": 28.353,
+            "Tag": 11,
+            "ActionTag": 1307137214,
+            "Size": {
+              "X": 499.0,
+              "Y": 451.0
+            },
+            "Name": "boy",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/index_bottom.png",
+              "Plist": "index.plist"
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "TopMargin": 668.0,
+            "Tag": 9,
+            "ActionTag": 841393911,
+            "Size": {
+              "X": 400.0,
+              "Y": 44.0
+            },
+            "Name": "index_bottom_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "index/light.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 774,
+              "Dst": 772
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 203.914,
+              "Y": 491.8127
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5098,
+              "Y": 0.6907
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -69.086,
+            "RightMargin": -76.914,
+            "TopMargin": 36.1874,
+            "BottomMargin": 307.8127,
+            "Tag": 13,
+            "ActionTag": 985250574,
+            "Size": {
+              "X": 546.0,
+              "Y": 368.0
+            },
+            "Name": "light",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "index/go.png",
+              "Plist": "index.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 163,
+            "Scale9Height": 139,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 216.6494,
+              "Y": 206.2713
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5416,
+              "Y": 0.2897
+            },
+            "PreSize": {
+              "X": 0.4825,
+              "Y": 0.2261
+            },
+            "LeftMargin": 120.1494,
+            "RightMargin": 86.8506,
+            "TopMargin": 425.2287,
+            "BottomMargin": 125.7713,
+            "Tag": 50,
+            "ActionTag": 281633336,
+            "Size": {
+              "X": 193.0,
+              "Y": 161.0
+            },
+            "Name": "playBtn",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 400.0,
+          "Y": 712.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "index.plist",
+        "index.png",
+        "index/index_bg.jpg",
+        "index/index_boy.png",
+        "index/light.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}
