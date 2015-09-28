@@ -19,6 +19,10 @@ var IndexScene = cc.Scene.extend({
      * @type ccui.Button
      */
     playBtn: null,
+    /**
+     * @type ccui.Button
+     */
+    musicBtn: null,
     ctor: function () {
         this._super();
 
@@ -37,6 +41,7 @@ var IndexScene = cc.Scene.extend({
         this.girl = seekChildByName(this.mainNode, "girl");
         this.light = seekChildByName(this.mainNode, "light");
         this.playBtn = seekChildByName(this.mainNode, "playBtn");
+        this.musicBtn = seekChildByName(this.mainNode, "musicBtn");
 
         shake.randomShakeLoop(this.boy);
         shake.randomShakeLoop(this.girl);
@@ -56,9 +61,17 @@ var IndexScene = cc.Scene.extend({
         this.addChild(title, 1);
 
         //event
+        var that = this;
         this.playBtn.addClickEventListener(function () {
             cc.director.runScene(new cc.TransitionFade(0.35, new ChapterScene(), hex2Color(0xd8f5fd)));
         });
+
+        this.musicBtn.addClickEventListener(function () {
+            SoundsManager.instance.toggle();
+            that.musicShow();
+        });
+        this.musicShow();
+        SoundsManager.instance.playMusic();
 
         if (cc.sys.isNative) {
             cc.eventManager.addListener({
@@ -66,6 +79,14 @@ var IndexScene = cc.Scene.extend({
                 onKeyReleased: this.onKeyClicked.bind(this)
             }, this);
         }
+    },
+
+    musicShow: function () {
+       var url = "ui/music_open.png";
+        if(!SoundsManager.instance.isAudio){
+            url = "ui/music_close.png";
+        }
+        this.musicBtn.loadTextures(url,url,url,ccui.Widget.PLIST_TEXTURE);
     },
 
     onKeyClicked: function (keyCode, event) {

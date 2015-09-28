@@ -6,6 +6,10 @@ var PauseLayer = cc.Layer.extend({
      * @type cc.LabelTTF
      */
     timeTF: null,
+    /**
+     * @type ccui.Button
+     */
+    musicBtn:null,
     ctor: function (control) {
         this._super();
 
@@ -41,11 +45,31 @@ var PauseLayer = cc.Layer.extend({
         this.addChild(timeTF);
         this.timeTF = timeTF;
 
+        //music btn
+        this.musicBtn = new ccui.Button();
+        this.musicBtn.x = 50;
+        this.musicBtn.y = 50;
+        this.addChild(this.musicBtn);
+        var that = this;
+        this.musicBtn.addClickEventListener(function () {
+            SoundsManager.instance.toggle();
+            that.musicShow();
+        });
+        this.musicShow();
+
         //event
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: this.onTouchBeganHandler.bind(this)
         }, this);
+    },
+
+    musicShow: function () {
+        var url = "ui/music_open.png";
+        if(!SoundsManager.instance.isAudio){
+            url = "ui/music_close.png";
+        }
+        this.musicBtn.loadTextures(url,url,url,ccui.Widget.PLIST_TEXTURE);
     },
 
     /**
