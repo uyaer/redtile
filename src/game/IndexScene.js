@@ -59,7 +59,20 @@ var IndexScene = cc.Scene.extend({
         this.playBtn.addClickEventListener(function () {
             cc.director.runScene(new cc.TransitionFade(0.35, new ChapterScene(), hex2Color(0xd8f5fd)));
         });
-    }
+
+        if (cc.sys.isNative) {
+            cc.eventManager.addListener({
+                event: cc.EventListener.KEYBOARD,
+                onKeyReleased: this.onKeyClicked.bind(this)
+            }, this);
+        }
+    },
+
+    onKeyClicked: function (keyCode, event) {
+        if (keyCode == cc.KEY.back) {
+            App.showConfirmClose();
+        }
+    },
 });
 
 IndexScene.isFirstEnter = true;
