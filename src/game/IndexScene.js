@@ -72,7 +72,7 @@ var IndexScene = cc.Scene.extend({
         if (keyCode == cc.KEY.back) {
             App.showConfirmClose();
         }
-    },
+    }
 });
 
 IndexScene.isFirstEnter = true;

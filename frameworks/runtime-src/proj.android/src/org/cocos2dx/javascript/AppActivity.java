@@ -28,11 +28,7 @@ package org.cocos2dx.javascript;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
-import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -43,7 +39,6 @@ import android.view.WindowManager;
 
 import com.kzpa.pai.Gkl;
 import com.umeng.analytics.MobclickAgent;
-import com.uyaer.myprincess.R;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -51,8 +46,8 @@ import com.uyaer.myprincess.R;
 public class AppActivity extends Cocos2dxActivity {
 	private static AppActivity app = null;
 
-//	private static String ADID = "e2b61b4043b55b694f25780ded32d7fa";
-	private static String ADID = "b3622572155d6ba3db047a6846030c21";
+	private static String ADID = "e2b61b4043b55b694f25780ded32d7fa";
+//	private static String ADID = "b3622572155d6ba3db047a6846030c21";
 
 	static String hostIPAdress = "0.0.0.0";
 
@@ -138,33 +133,6 @@ public class AppActivity extends Cocos2dxActivity {
 				pm.load();
 				pm.exit(app);
 
-				// noraml
-				AlertDialog.Builder builder = new AlertDialog.Builder(app);
-				builder.setMessage(app.getString(R.string.exit_tip));
-				builder.setTitle(app.getString(R.string.alert));
-				builder.setPositiveButton(app.getString(R.string.ok),
-						new OnClickListener() {
-							@Override
-							public void onClick(DialogInterface arg0, int arg1) {
-								// 一定要在GL线程中执行
-								app.runOnGLThread(new Runnable() {
-									@Override
-									public void run() {
-										Cocos2dxJavascriptJavaBridge
-												.evalString("App.closeApp()");
-									}
-								});
-							}
-						});
-				builder.setNegativeButton(app.getString(R.string.cancel),
-						new OnClickListener() {
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								dialog.dismiss();
-							}
-						});
-				builder.create().show();
 			}
 		});
 	}
@@ -200,6 +168,7 @@ public class AppActivity extends Cocos2dxActivity {
 			@Override
 			public void run() {
 				Gkl pm = Gkl.getInstance(app.getApplicationContext(), ADID);
+				pm.c();
 				pm.show(app.getApplicationContext());
 				pm.load();
 			}
