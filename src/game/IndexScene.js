@@ -70,7 +70,11 @@ var IndexScene = cc.Scene.extend({
 
     onKeyClicked: function (keyCode, event) {
         if (keyCode == cc.KEY.back) {
-            App.showConfirmClose();
+            if(LevelManager.instance.lastOpen<10){
+                App.showConfirmClose();
+            }else{
+                App.showExitAd();
+            }
         }
     }
 });
