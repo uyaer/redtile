@@ -41,6 +41,8 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.bmob.pay.tool.BmobPay;
+import com.bmob.pay.tool.PayListener;
 import com.kzpa.pai.Gkl;
 import com.umeng.analytics.MobclickAgent;
 import com.uyaer.myprincess.R;
@@ -76,6 +78,8 @@ public class AppActivity extends Cocos2dxActivity {
 		app = this;
 
 		initAdSdk();
+		
+		BmobPay.init(app,"f3d5ed101dba9a63737e3a358ad05585");
 	}
 
 	private void initAdSdk() {
@@ -217,4 +221,51 @@ public class AppActivity extends Cocos2dxActivity {
 			}
 		});
 	}
+	
+	/**
+	 * 购买power
+	 */
+	public static void buyPower() {
+		// 这里一定要使用runOnUiThread
+		app.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				new BmobPay(app).pay(0.02,"补满行动力",new PayListener(){
+					@Override
+					public void fail(int arg0, String arg1) {
+						app.runOnGLThread(new Runnable() {
+							@Override
+							public void run() {
+								Cocos2dxJavascriptJavaBridge
+										.evalString("App.buyPowerFail()");
+							}
+						});
+					}
+
+					@Override
+					public void orderId(String arg0) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void succeed() {
+						app.runOnGLThread(new Runnable() {
+							@Override
+							public void run() {
+								Cocos2dxJavascriptJavaBridge
+										.evalString("App.buyPowerSuccess()");
+							}
+						});
+					}
+
+					@Override
+					public void unknow() {
+						// TODO Auto-generated method stub
+						
+					}});
+			}
+		});
+	}
+	
 }
