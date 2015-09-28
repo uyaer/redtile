@@ -28,7 +28,11 @@ package org.cocos2dx.javascript;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
+import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -39,6 +43,7 @@ import android.view.WindowManager;
 
 import com.kzpa.pai.Gkl;
 import com.umeng.analytics.MobclickAgent;
+import com.uyaer.myprincess.R;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -121,9 +126,9 @@ public class AppActivity extends Cocos2dxActivity {
 	 */
 
 	/**
-	 * 提示关闭界面
+	 * 显示广告退出
 	 */
-	public static void confirmClose() {
+	public static void showExitAd() {
 		// 这里一定要使用runOnUiThread
 		app.runOnUiThread(new Runnable() {
 			@Override
@@ -133,6 +138,44 @@ public class AppActivity extends Cocos2dxActivity {
 				pm.load();
 				pm.exit(app);
 
+			}
+		});
+	}
+	
+	/**
+	 * 提示关闭界面
+	 */
+	public static void confirmClose() {
+		// 这里一定要使用runOnUiThread
+		app.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				AlertDialog.Builder builder = new AlertDialog.Builder(app);
+				builder.setMessage(app.getString(R.string.exit_tip));
+				builder.setTitle(app.getString(R.string.alert));
+				builder.setPositiveButton(app.getString(R.string.ok),
+						new OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// 一定要在GL线程中执行
+								app.runOnGLThread(new Runnable() {
+									@Override
+									public void run() {
+										Cocos2dxJavascriptJavaBridge
+												.evalString("App.closeApp()");
+									}
+								});
+							}
+						});
+				builder.setNegativeButton(app.getString(R.string.cancel),
+						new OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.dismiss();
+							}
+						});
+				builder.create().show();
 			}
 		});
 	}
