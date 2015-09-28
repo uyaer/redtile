@@ -1,7 +1,11 @@
 function trace(str) {
     var log = "";
     for (var i = 0; i < arguments.length; i++) {
-        log += arguments[i] + ",";
+        var obj = arguments[i];
+        if (cc.isObject(obj) || cc.isArray(obj)) {
+            obj = JSON.stringify(obj);
+        }
+        log += obj+",";
     }
     console.log(log);
 }

@@ -198,7 +198,7 @@ var LogoScene = cc.Scene.extend({
             if (i == len - 1) {
                 animArr.push(cc.delayTime(0.15));
                 animArr.push(cc.scaleTo(0.1, 1.45));
-                animArr.push(cc.callFunc(this.showClickAnim, this, cc.p(490, 782)));
+                animArr.push(cc.callFunc(this.showClickAnim, this, cc.p(490*this.SCALE, 782*this.SCALE)));
                 animArr.push(cc.scaleTo(0.1, 1));
                 animArr.push(cc.delayTime(2));
                 animArr.push(cc.callFunc(this.callback));

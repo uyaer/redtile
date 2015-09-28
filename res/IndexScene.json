@@ -337,8 +337,8 @@
           }
         ],
         "Size": {
-          "X": 400.0,
-          "Y": 712.0
+          "X": 100.0,
+          "Y": 100.0
         },
         "Name": "Scene",
         "ctype": "SingleNodeObjectData"
