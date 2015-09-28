@@ -83,6 +83,7 @@ var LogoScene = cc.Scene.extend({
         this.url.x = Const.WIN_W / 2;
         this.url.y = Const.WIN_H * 0.2;
         this.url.opacity = 0;
+        this.url.scale = this.SCALE;
         this.addChild(this.url);
 
         this.showStartAnim();
@@ -118,7 +119,7 @@ var LogoScene = cc.Scene.extend({
     showStartAnim: function () {
         this.logo.runAction(cc.sequence(
             cc.delayTime(0.1),
-            cc.scaleTo(0.35, 0.25 * this.SCALE),
+            cc.scaleTo(0.35, 0.3 * this.SCALE),
             cc.moveTo(0.45, Const.WIN_W * 0.2, this.logo.y).easing(cc.easeSineIn()),
             cc.callFunc(this.startLoading, this)
         ));
@@ -142,15 +143,25 @@ var LogoScene = cc.Scene.extend({
     setProgress: function (result, current, total) {
         var percent = current / total;
         percent = limit(percent, 0, 1);
-        this.line.scaleX = percent * 0.6 * Const.WIN_W;
-        this.logo.x = percent * 0.6 * Const.WIN_W + 0.2 * Const.WIN_W;
-        this.logo.scale = (0.25 + 0.75 * percent) * this.SCALE;
+        this.line.stopAllActions();
+        this.logo.stopAllActions();
+        this.line.runAction(cc.scaleTo(0.5, percent * 0.6 * Const.WIN_W, 1));
+        this.logo.runAction(cc.spawn(
+            cc.moveTo(0.5, percent * 0.6 * Const.WIN_W + 0.2 * Const.WIN_W, this.line.y),
+            cc.scaleTo(0.5, (0.25 + 0.75 * percent) * this.SCALE)
+        ));
     },
 
     /**
      * 加载完成动画
      */
     loadOver: function () {
+        if (this.logo.actionManager.numberOfRunningActionsInTarget(this.logo) > 0) {
+            setTimeout(this.loadOver.bind(this), 600);
+            return;
+        }
+        this.line.stopAllActions();
+        this.logo.stopAllActions();
         this.line.runAction(cc.spawn(
             cc.scaleTo(0.35, 0, 1).easing(cc.easeSineIn()),
             cc.moveTo(0.35, 0, this.line.y).easing(cc.easeSineIn())
@@ -166,7 +177,7 @@ var LogoScene = cc.Scene.extend({
         this.leaf.visible = true;
         this.leaf.runAction(cc.sequence(
             cc.delayTime(0.5),
-            cc.moveTo(0.4, Const.WIN_W * 0.8, this.logo.y + 50 * this.SCALE).easing(cc.easeSineIn()),
+            cc.moveTo(0.4, Const.WIN_W * 0.8, this.logo.y + 45 * this.SCALE).easing(cc.easeSineIn()),
             cc.callFunc(this.startPrinter, this)
         ));
     },
@@ -192,14 +203,14 @@ var LogoScene = cc.Scene.extend({
         var len = this.TXT.length;
         for (var i = 0; i < len; i++) {
             var c = this.tipTF.getChildByTag(i);
-            c.x -= Const.WIN_W*2;
+            c.x -= Const.WIN_W * 2;
             c.y -= 10;
             var animArr = [cc.delayTime(i * 0.12),
-                cc.moveBy(0.2, Const.WIN_W *2, 10)];
+                cc.moveBy(0.2, Const.WIN_W * 2, 10)];
             if (i == len - 1) {
                 animArr.push(cc.delayTime(0.15));
                 animArr.push(cc.scaleTo(0.1, 1.45));
-                animArr.push(cc.callFunc(this.showClickAnim, this, cc.p(490*this.SCALE, 782*this.SCALE)));
+                animArr.push(cc.callFunc(this.showClickAnim, this, cc.p(490 * this.SCALE, 782 * this.SCALE)));
                 animArr.push(cc.scaleTo(0.1, 1));
                 animArr.push(cc.delayTime(2));
                 animArr.push(cc.callFunc(this.callback));

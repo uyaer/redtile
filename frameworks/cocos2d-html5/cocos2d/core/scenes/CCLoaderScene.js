@@ -50,6 +50,7 @@ cc.LoaderScene = cc.Scene.extend({
         this.addChild(bg);
 
         var icon = new cc.Sprite(res.logo);
+        icon.scale = 0.6;
         icon.name = "logo";
         icon.anchorX = 96 / 149;
         icon.anchorY = 0;
