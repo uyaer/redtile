@@ -70,39 +70,39 @@ int js_module_register()
     sc->addRegisterCallback(register_all_cocos2dx_studio_manual);
     
     // spine can be commented out to reduce the package
-    sc->addRegisterCallback(register_all_cocos2dx_spine);
-    sc->addRegisterCallback(register_all_cocos2dx_spine_manual);
-    
+//    sc->addRegisterCallback(register_all_cocos2dx_spine);
+//    sc->addRegisterCallback(register_all_cocos2dx_spine_manual);
+
     // XmlHttpRequest can be commented out to reduce the package
     sc->addRegisterCallback(MinXmlHttpRequest::_js_register);
     // websocket can be commented out to reduce the package
-    sc->addRegisterCallback(register_jsb_websocket);
-    // sokcet io can be commented out to reduce the package
-    sc->addRegisterCallback(register_jsb_socketio);
+//    sc->addRegisterCallback(register_jsb_websocket);
+//    // sokcet io can be commented out to reduce the package
+//    sc->addRegisterCallback(register_jsb_socketio);
 
     // 3d can be commented out to reduce the package
-    sc->addRegisterCallback(register_all_cocos2dx_3d);
-    sc->addRegisterCallback(register_all_cocos2dx_3d_manual);
-    
+//    sc->addRegisterCallback(register_all_cocos2dx_3d);
+//    sc->addRegisterCallback(register_all_cocos2dx_3d_manual);
+//
     // 3d extension can be commented out to reduce the package
-    sc->addRegisterCallback(register_all_cocos2dx_3d_extension);
-    
+//    sc->addRegisterCallback(register_all_cocos2dx_3d_extension);
+
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
     // Physics 3d can be commented out to reduce the package
-    sc->addRegisterCallback(register_all_cocos2dx_physics3d);
-    sc->addRegisterCallback(register_all_cocos2dx_physics3d_manual);
+//    sc->addRegisterCallback(register_all_cocos2dx_physics3d);
+//    sc->addRegisterCallback(register_all_cocos2dx_physics3d_manual);
 #endif
 
 #if CC_USE_NAVMESH
-    sc->addRegisterCallback(register_all_cocos2dx_navmesh);
-    sc->addRegisterCallback(register_all_cocos2dx_navmesh_manual);
+//    sc->addRegisterCallback(register_all_cocos2dx_navmesh);
+//    sc->addRegisterCallback(register_all_cocos2dx_navmesh_manual);
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    sc->addRegisterCallback(register_all_cocos2dx_experimental_video);
-    sc->addRegisterCallback(register_all_cocos2dx_experimental_video_manual);
-    sc->addRegisterCallback(register_all_cocos2dx_experimental_webView);
-    sc->addRegisterCallback(register_all_cocos2dx_experimental_webView_manual);
+//    sc->addRegisterCallback(register_all_cocos2dx_experimental_video);
+//    sc->addRegisterCallback(register_all_cocos2dx_experimental_video_manual);
+//    sc->addRegisterCallback(register_all_cocos2dx_experimental_webView);
+//    sc->addRegisterCallback(register_all_cocos2dx_experimental_webView_manual);
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
