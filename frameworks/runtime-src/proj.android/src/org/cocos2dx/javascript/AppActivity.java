@@ -30,8 +30,6 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 
-import com.uyaer.myprincess.R;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -42,6 +40,9 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.umeng.analytics.MobclickAgent;
+import com.uyaer.myprincess.R;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -71,6 +72,18 @@ public class AppActivity extends Cocos2dxActivity {
 		app = this;
 	}
 
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+	
 	@Override
 	public Cocos2dxGLSurfaceView onCreateView() {
 		Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
