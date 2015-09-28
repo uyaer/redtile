@@ -71,6 +71,11 @@ App.closeApp = function () {
     cc.director.end();
 }
 
+App.openHome = function () {
+    var url = "http://www.uyaer.com";
+    jsb.reflection.callStaticMethod(App.__android_class, "showShare", "(Ljava/lang/String;)V", url);
+}
+
 App.showShare = function () {
     var lang = Const.LANG;
 

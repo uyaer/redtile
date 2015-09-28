@@ -104,7 +104,8 @@ var LogoScene = cc.Scene.extend({
             this.showClickAnim(pos);
         } else {
             if (cc.sys.isNative) {
-                //TODO show my home url
+                // show my home url
+                App.openHome();
             } else {
                 window.open("http://www.uyaer.com");
             }
