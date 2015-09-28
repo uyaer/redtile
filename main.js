@@ -87,7 +87,9 @@ cc.game.onStart = function () {
     Bmob.initialize("f3d5ed101dba9a63737e3a358ad05585", "1a01dd8eaf6e401fd4edb87b6fd12eea");
 
     //load resources
-    if (!cc.sys.isMobile && !cc.sys.isNative) {
+    var isNoShowLogo = !cc.sys.isMobile && !cc.sys.isNative;
+    isNoShowLogo = false;
+    if (isNoShowLogo) {
         cc.LoaderScene.preload(g_resources, function () {
             gameStart();
         }, this);

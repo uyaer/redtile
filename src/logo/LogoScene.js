@@ -26,6 +26,7 @@ var LogoScene = cc.Scene.extend({
      * @type Function
      */
     callback: null,
+    SCALE: 0.6,
     ctor: function (cb) {
         this._super();
 
@@ -46,33 +47,35 @@ var LogoScene = cc.Scene.extend({
         this.logo.name = "logo";
         this.logo.anchorX = 96 / 149;
         this.logo.anchorY = 0;
-        this.logo.x = Const.WIN_W / 2 - 10;
-        this.logo.y = Const.WIN_H / 2 + 102;
+        this.logo.scale = this.SCALE;
+        this.logo.x = Const.WIN_W / 2 - 10 * this.SCALE;
+        this.logo.y = Const.WIN_H / 2 + 102 * this.SCALE;
         this.addChild(this.logo);
         //line
         this.line = new cc.Sprite(res.logo_line);
         this.line.name = "line";
         this.line.x = Const.WIN_W / 5;
-        this.line.y = Const.WIN_H / 2 + 100;
+        this.line.y = Const.WIN_H / 2 + 100 * this.SCALE;
         this.line.scaleX = 0;
         this.addChild(this.line);
         //leaf
         this.leaf = new cc.Sprite(res.logo_leaf);
         this.leaf.name = "leaf";
-        this.leaf.scale = 2;
+        this.leaf.scale = 2 * this.SCALE;
         this.leaf.rotation = -12.5;
         this.leaf.anchorX = 1;
         this.leaf.anchorY = 1;
         this.leaf.x = 0;
-        this.leaf.y = 600;
+        this.leaf.y = 600 * this.SCALE;
         this.leaf.visible = false;
         this.addChild(this.leaf);
         //tip
         this.tipTF = new cc.LabelBMFont(this.TXT, res.logo_font_fnt);
         this.tipTF.rotation = -8.5;
         this.tipTF.visible = false;
-        this.tipTF.x = Const.WIN_W / 2 + 20;
-        this.tipTF.y = this.logo.y + 40;
+        this.tipTF.x = Const.WIN_W / 2 + 40 * this.SCALE;
+        this.tipTF.y = this.logo.y + 25;
+        this.tipTF.scale = this.SCALE;
         this.addChild(this.tipTF);
         //url
         this.url = new cc.Sprite(res.logo_url);
@@ -114,7 +117,7 @@ var LogoScene = cc.Scene.extend({
     showStartAnim: function () {
         this.logo.runAction(cc.sequence(
             cc.delayTime(0.1),
-            cc.scaleTo(0.35, 0.25),
+            cc.scaleTo(0.35, 0.25 * this.SCALE),
             cc.moveTo(0.45, Const.WIN_W * 0.2, this.logo.y).easing(cc.easeSineIn()),
             cc.callFunc(this.startLoading, this)
         ));
@@ -140,7 +143,7 @@ var LogoScene = cc.Scene.extend({
         percent = limit(percent, 0, 1);
         this.line.scaleX = percent * 0.6 * Const.WIN_W;
         this.logo.x = percent * 0.6 * Const.WIN_W + 0.2 * Const.WIN_W;
-        this.logo.scale = 0.25 + 0.75 * percent;
+        this.logo.scale = (0.25 + 0.75 * percent) * this.SCALE;
     },
 
     /**
@@ -154,7 +157,7 @@ var LogoScene = cc.Scene.extend({
         this.logo.runAction(cc.sequence(
             cc.moveTo(0.35, Const.WIN_W * 0.3, this.logo.y).easing(cc.easeSineIn()),
             cc.spawn(
-                cc.moveBy(0.4, -10, -35).easing(cc.easeSineIn()),
+                cc.moveBy(0.4, -10 * this.SCALE, -35 * this.SCALE).easing(cc.easeSineIn()),
                 cc.rotateTo(0.4, -30).easing(cc.easeSineIn())
             )
         ));
@@ -162,7 +165,7 @@ var LogoScene = cc.Scene.extend({
         this.leaf.visible = true;
         this.leaf.runAction(cc.sequence(
             cc.delayTime(0.5),
-            cc.moveTo(0.4, Const.WIN_W * 0.8, this.logo.y + 50).easing(cc.easeSineIn()),
+            cc.moveTo(0.4, Const.WIN_W * 0.8, this.logo.y + 50 * this.SCALE).easing(cc.easeSineIn()),
             cc.callFunc(this.startPrinter, this)
         ));
     },
@@ -188,10 +191,10 @@ var LogoScene = cc.Scene.extend({
         var len = this.TXT.length;
         for (var i = 0; i < len; i++) {
             var c = this.tipTF.getChildByTag(i);
-            c.x -= Const.WIN_W * 0.75;
+            c.x -= Const.WIN_W*2;
             c.y -= 10;
             var animArr = [cc.delayTime(i * 0.12),
-                cc.moveBy(0.2, Const.WIN_W * 0.75, 10)];
+                cc.moveBy(0.2, Const.WIN_W *2, 10)];
             if (i == len - 1) {
                 animArr.push(cc.delayTime(0.15));
                 animArr.push(cc.scaleTo(0.1, 1.45));
