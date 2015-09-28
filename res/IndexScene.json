@@ -112,8 +112,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 81.5054,
-              "Y": 113.6502
+              "X": 72.8655,
+              "Y": 97.8102
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -122,17 +122,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.2038,
-              "Y": 0.1596
+              "X": 0.1822,
+              "Y": 0.1374
             },
             "PreSize": {
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -10.4946,
-            "RightMargin": 226.4946,
-            "TopMargin": 485.3498,
-            "BottomMargin": 0.6502,
+            "LeftMargin": -19.1345,
+            "RightMargin": 235.1345,
+            "TopMargin": 501.1898,
+            "BottomMargin": -15.1898,
             "Tag": 12,
             "ActionTag": 849970990,
             "Size": {
@@ -157,8 +157,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 228.3867,
-              "Y": 253.853
+              "X": 232.7076,
+              "Y": 213.5327
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -167,17 +167,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.571,
-              "Y": 0.3565
+              "X": 0.5818,
+              "Y": 0.2999
             },
             "PreSize": {
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -21.1133,
-            "RightMargin": -77.8867,
-            "TopMargin": 232.647,
-            "BottomMargin": 28.353,
+            "LeftMargin": -16.7924,
+            "RightMargin": -82.2076,
+            "TopMargin": 272.9673,
+            "BottomMargin": -11.9673,
             "Tag": 11,
             "ActionTag": 1307137214,
             "Size": {
@@ -185,45 +185,6 @@
               "Y": 451.0
             },
             "Name": "boy",
-            "ctype": "SpriteObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "MarkedSubImage",
-              "Path": "index/index_bottom.png",
-              "Plist": "index.plist"
-            },
-            "BlendFunc": {
-              "Src": 770,
-              "Dst": 771
-            },
-            "AnchorPoint": {},
-            "Position": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "TopMargin": 668.0,
-            "Tag": 9,
-            "ActionTag": 841393911,
-            "Size": {
-              "X": 400.0,
-              "Y": 44.0
-            },
-            "Name": "index_bottom_1",
             "ctype": "SpriteObjectData"
           },
           {
@@ -305,8 +266,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 216.6494,
-              "Y": 206.2713
+              "X": 208.0123,
+              "Y": 101.1515
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -315,17 +276,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5416,
-              "Y": 0.2897
+              "X": 0.52,
+              "Y": 0.1421
             },
             "PreSize": {
               "X": 0.4825,
               "Y": 0.2261
             },
-            "LeftMargin": 120.1494,
-            "RightMargin": 86.8506,
-            "TopMargin": 425.2287,
-            "BottomMargin": 125.7713,
+            "LeftMargin": 111.5123,
+            "RightMargin": 95.4877,
+            "TopMargin": 530.3484,
+            "BottomMargin": 20.6515,
             "Tag": 50,
             "ActionTag": 281633336,
             "Size": {
@@ -333,6 +294,71 @@
               "Y": 161.0
             },
             "Name": "playBtn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "ui/music_open.png",
+              "Plist": "ui.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 38,
+            "Scale9Height": 52,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 349.9072,
+              "Y": 52.2569
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8748,
+              "Y": 0.0734
+            },
+            "PreSize": {
+              "X": 0.17,
+              "Y": 0.1039
+            },
+            "LeftMargin": 315.9072,
+            "RightMargin": 16.0928,
+            "TopMargin": 622.7431,
+            "BottomMargin": 15.2569,
+            "Tag": 9,
+            "ActionTag": -462170799,
+            "Size": {
+              "X": 68.0,
+              "Y": 74.0
+            },
+            "Name": "musicBtn",
             "ctype": "ButtonObjectData"
           }
         ],
@@ -348,7 +374,9 @@
         "index.png",
         "index/index_bg.jpg",
         "index/index_boy.png",
-        "index/light.png"
+        "index/light.png",
+        "ui.plist",
+        "ui.png"
       ],
       "ctype": "GameProjectData"
     }

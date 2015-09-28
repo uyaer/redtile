@@ -18,7 +18,7 @@
 			<key>ui/item.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,282},{25,25}}</string>
+				<string>{{470,77},{25,25}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -29,24 +29,24 @@
 			<key>ui/music_close.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{470,1},{70,83}}</string>
+				<string>{{470,1},{68,74}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{70,83}</string>
+				<string>{68,74}</string>
 			</dict>
 			<key>ui/music_open.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,163},{70,83}}</string>
+				<string>{{362,163},{68,74}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{70,83}</string>
+				<string>{68,74}</string>
 			</dict>
 			<key>ui/next.png</key>
 			<dict>
@@ -73,7 +73,7 @@
 			<key>ui/quadbg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{362,248},{32,32}}</string>
+				<string>{{362,239},{32,32}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -135,12 +135,12 @@
 			<key>realTextureFileName</key>
 			<string>ui.png</string>
 			<key>size</key>
-			<string>{541,666}</string>
+			<string>{539,666}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>541</integer>
+			<integer>539</integer>
 			<key>height</key>
 			<integer>666</integer>
 		</dict>

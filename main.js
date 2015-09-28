@@ -88,7 +88,7 @@ cc.game.onStart = function () {
 
     //load resources
     var isNoShowLogo = !cc.sys.isMobile && !cc.sys.isNative;
-    isNoShowLogo = false;
+    //isNoShowLogo = false;
     if (isNoShowLogo) {
         cc.LoaderScene.preload(g_resources, function () {
             gameStart();
@@ -109,6 +109,7 @@ cc.game.onStart = function () {
 
         Lang.init();
         LevelManager.instance.initConfig();
+        SoundsManager.instance.load();
 
         //获取数据
         Net.loadGameStep();
