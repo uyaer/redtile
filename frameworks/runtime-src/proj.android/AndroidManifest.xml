@@ -17,7 +17,7 @@
         <meta-data
             android:name="android.app.lib_name"
             android:value="cocos2djs" />
-        
+
         <!-- umeng -->
         <meta-data
             android:name="UMENG_APPKEY"
@@ -39,6 +39,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- daoyoudao 360 -->
+        <activity
+            android:name="com.kzpa.pai.Nmn"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.kzpa.pai.Zxz" />
     </application>
 
     <supports-screens
@@ -53,7 +62,10 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

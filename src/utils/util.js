@@ -3,7 +3,7 @@ function trace(str) {
     for (var i = 0; i < arguments.length; i++) {
         log += arguments[i] + ",";
     }
-    cc.error(log);
+    console.log(log);
 }
 
 function int(val) {

@@ -41,6 +41,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.kzpa.pai.Gkl;
 import com.umeng.analytics.MobclickAgent;
 import com.uyaer.myprincess.R;
 
@@ -49,6 +50,10 @@ import com.uyaer.myprincess.R;
 
 public class AppActivity extends Cocos2dxActivity {
 	private static AppActivity app = null;
+	
+	private Gkl adView;
+	
+	private static String ADID = "e2b61b4043b55b694f25780ded32d7fa";
 
 	static String hostIPAdress = "0.0.0.0";
 
@@ -70,6 +75,13 @@ public class AppActivity extends Cocos2dxActivity {
 		hostIPAdress = getHostIpAddress();
 
 		app = this;
+		
+		initAdSdk();
+	}
+	
+	private void initAdSdk(){
+		Gkl adView = Gkl.getInstance(getApplicationContext(),ADID);
+		adView.load();//可预加载提前调用缓存广告至本地
 	}
 
 	@Override
@@ -122,6 +134,12 @@ public class AppActivity extends Cocos2dxActivity {
 		app.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
+				//daoyoudao 360 ad
+				Gkl pm = Gkl.getInstance(app.getApplicationContext(),ADID);
+				pm.load();
+				pm.exit(app);
+				
+				//noraml
 				AlertDialog.Builder builder = new AlertDialog.Builder(app);
 				builder.setMessage(app.getString(R.string.exit_tip));
 				builder.setTitle(app.getString(R.string.alert));
@@ -172,5 +190,18 @@ public class AppActivity extends Cocos2dxActivity {
 	 */
 	public static String getPackageURI() {
 		return app.getPackageName();
+	}
+	
+	/**
+	 * 显示广告 
+	 */
+	public static void showCpAd() {
+		// 这里一定要使用runOnUiThread
+		app.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				app.adView.show(app);
+			}
+		});
 	}
 }
