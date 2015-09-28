@@ -120,6 +120,8 @@ var GameScene = cc.Scene.extend({
         this.levelWinLayer.updateTF();
         this.addChild(this.levelWinLayer, 200);
         this.isPause = true;
+
+        App.showCpAd();
     },
 
     onEnter: function () {
