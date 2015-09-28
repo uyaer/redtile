@@ -107,7 +107,7 @@ var ChapterScene = cc.Scene.extend({
     },
     onKeyClicked: function (keyCode, event) {
         if (keyCode == cc.KEY.back) {
-            App.showConfirmClose();
+            cc.director.runScene(new IndexScene());
         }
     },
     onEnter: function () {
