@@ -104,8 +104,3 @@ App.hideCpAd = function () {
         jsb.reflection.callStaticMethod(App.__android_class, "hideCpAd", "()V");
     }
 }
-App.preloadCpAd = function () {
-    if (cc.sys.isNative) {
-        jsb.reflection.callStaticMethod(App.__android_class, "preloadCpAd", "()V");
-    }
-}

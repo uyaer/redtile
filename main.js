@@ -107,8 +107,6 @@ cc.game.onStart = function () {
             return;
         }
 
-        App.preloadCpAd();
-
         Lang.init();
         LevelManager.instance.initConfig();
 
