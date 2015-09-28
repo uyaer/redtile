@@ -87,23 +87,6 @@ var ChapterScene = cc.Scene.extend({
                 onKeyReleased: this.onKeyClicked.bind(this)
             }, this);
         }
-
-        //music
-        var isAudio = SoundsManager.instance.isAudio;
-        this.musicSp = new cc.Sprite("#ui/music_" + (isAudio ? "open" : "close") + ".png");
-        var that = this;
-        var item = new cc.MenuItemSprite(this.musicSp);
-        item.setCallback(function () {
-            SoundsManager.instance.toggle();
-            isAudio = !isAudio;
-            var frame = new cc.SpriteFrame("#ui/music_" + (isAudio ? "open" : "close") + ".png", cc.rect(0, 0, 70, 83));
-            that.musicSp.setSpriteFrame(frame);
-        }, this);
-
-        var menu = cc.Menu.create(item);
-        menu.setPosition(cc.p(45, 50));
-        this.addChild(menu);
-
     },
     onKeyClicked: function (keyCode, event) {
         if (keyCode == cc.KEY.back) {
@@ -162,18 +145,21 @@ var ChapterScene = cc.Scene.extend({
             }
         }
     },
+
     nextPage: function () {
         if (this.pageIndex < 3) {
             this.pageIndex++;
         }
         this.scroll.setContentOffsetInDuration(cc.p(-400 * this.pageIndex, 0), 0.25);
     },
+
     prevPage: function () {
         if (this.pageIndex > 0) {
             this.pageIndex--;
         }
         this.scroll.setContentOffsetInDuration(cc.p(-400 * this.pageIndex, 0), 0.25);
     },
+
     _checkClick: function (pos) {
         for (var i = this.pageIndex * 12; i < Math.min(this.itemArr.length, (this.pageIndex + 1) * 12); i++) {
             var item = this.itemArr[i];

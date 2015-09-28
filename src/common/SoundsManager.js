@@ -11,17 +11,13 @@ var SoundsManager = cc.Class.extend({
     /**
      * 当前背景音乐的路径
      */
-    bgSoundPath: "",
+    bgSoundPath: "res/sounds/bgsound.mp3",
     ctor: function () {
         this.load();
     }
 });
 
 SoundsManager.prototype.load = function () {
-    if (cc.sys.os.toLowerCase() == "windows") {
-        this.isAudio = false;
-        return;
-    }
     var dataStr = cc.sys.localStorage.getItem("sound");
     if (!dataStr)return;
     var sound = JSON.parse(dataStr);
@@ -60,7 +56,7 @@ SoundsManager.prototype.playMusic = function (path) {
     if (this.isAudio) {
         if (!cc.audioEngine.isMusicPlaying()) {
             this.bgSoundPath = path;
-            //cc.audioEngine.playMusic(path, true);
+            cc.audioEngine.playMusic(path, true);
             cc.audioEngine.setMusicVolume(0.55);
         }
     }
@@ -71,14 +67,14 @@ SoundsManager.prototype.playMusic = function (path) {
  * @param loop 默认false
  */
 SoundsManager.prototype.playEffect = function (name, loop, vol) {
-    var path = "res/sounds"+name+".mp3";
+    var path = "res/sounds/" + name + ".mp3";
     if (arguments.length < 3) {
         vol = 1;
     }
     if (this.isAudio) {
         loop = arguments[1] || false;
         cc.audioEngine.stopAllEffects();
-        //cc.audioEngine.playEffect(path, loop);
+        cc.audioEngine.playEffect(path, loop);
         cc.audioEngine.setEffectsVolume(vol);
     }
 }
