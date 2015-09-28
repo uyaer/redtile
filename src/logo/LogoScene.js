@@ -27,6 +27,14 @@ var LogoScene = cc.Scene.extend({
      */
     callback: null,
     SCALE: 0.6,
+    /**
+     * 是否在加载动画中
+     */
+    isLoadAniming: true,
+    /**
+     * 加载是否完成
+     */
+    isLoadOver: false,
     ctor: function (cb) {
         this._super();
 
@@ -129,6 +137,8 @@ var LogoScene = cc.Scene.extend({
      * 开始加载资源
      */
     startLoading: function () {
+        this.isLoadAniming = true;
+        this.isLoadOver = false;
         cc.loader.load(g_resources,
             this.setProgress.bind(this)
             , this.loadOver.bind(this));
@@ -145,7 +155,16 @@ var LogoScene = cc.Scene.extend({
         percent = limit(percent, 0, 1);
         this.line.stopAllActions();
         this.logo.stopAllActions();
-        this.line.runAction(cc.scaleTo(0.5, percent * 0.6 * Const.WIN_W, 1));
+        this.isLoadAniming = true;
+        this.line.runAction(cc.sequence(
+            cc.scaleTo(0.5, percent * 0.6 * Const.WIN_W, 1),
+            cc.callFunc(function () {
+                this.isLoadAniming = false;
+                if (this.isLoadOver) {
+                    this.loadOver();
+                }
+            }, this)
+        ));
         this.logo.runAction(cc.spawn(
             cc.moveTo(0.5, percent * 0.6 * Const.WIN_W + 0.2 * Const.WIN_W, this.line.y),
             cc.scaleTo(0.5, (0.25 + 0.75 * percent) * this.SCALE)
@@ -156,8 +175,8 @@ var LogoScene = cc.Scene.extend({
      * 加载完成动画
      */
     loadOver: function () {
-        if (this.logo.actionManager.numberOfRunningActionsInTarget(this.logo) > 0) {
-            setTimeout(this.loadOver.bind(this), 600);
+        this.isLoadOver = true;
+        if (this.isLoadAniming) {
             return;
         }
         this.line.stopAllActions();
