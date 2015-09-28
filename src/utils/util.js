@@ -1,9 +1,13 @@
 function trace(str) {
     var log = "";
     for (var i = 0; i < arguments.length; i++) {
-        log += arguments[i] + ",";
+        var obj = arguments[i];
+        if (cc.isObject(obj) || cc.isArray(obj)) {
+            obj = JSON.stringify(obj);
+        }
+        log += obj+",";
     }
-    cc.error(log);
+    console.log(log);
 }
 
 function int(val) {
