@@ -17,6 +17,15 @@
         <meta-data
             android:name="android.app.lib_name"
             android:value="cocos2djs" />
+        
+        <!-- umeng -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="538dc4bb56240ba10b00f1bd" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="360" />
 
         <activity
             android:name="org.cocos2dx.javascript.AppActivity"
