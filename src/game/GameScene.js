@@ -120,8 +120,10 @@ var GameScene = cc.Scene.extend({
         this.levelWinLayer.updateTF();
         this.addChild(this.levelWinLayer, 200);
         this.isPause = true;
-
-        App.showCpAd();
+        var lv = LevelManager.instance.currentLevel;
+        if(lv>10){
+            App.showCpAd();
+        }
     },
 
     onEnter: function () {
