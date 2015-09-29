@@ -131,13 +131,6 @@ function isSameElTowArray(arr1, arr2) {
     return false;
 }
 
-function runScene(name) {
-    if (cc.sys.isNative || !cc.sys.isMobile) {
-        flax.replaceScene(name, cc.TransitionSlideInR, 0.5);
-    } else {
-        flax.replaceScene(name);
-    }
-}
 
 /**
  * 显示提示信息
@@ -153,7 +146,7 @@ function showTip(str) {
     cc.director.getRunningScene().addChild(tf,1000);
     tf.runAction(cc.sequence(
         cc.moveBy(0.15, 0, -20).easing(cc.easeSineOut()),
-        cc.delayTime(0.2),
+        cc.delayTime(0.25),
         cc.moveBy(0.35, 0, 90),
         cc.removeSelf(true)
     ));

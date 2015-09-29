@@ -48,7 +48,7 @@ var BuyHpPanel = cc.Node.extend({
         this.okBtn.addClickEventListener(function () {
             if (Const.LANG == "zh") {
                 // buy power
-                App.buyPower();
+                cc.director.getRunningScene().addChild(new PaySelectPanel(),101);
             } else {
                 that.noBuyHandler();
             }
@@ -62,7 +62,7 @@ var BuyHpPanel = cc.Node.extend({
     noBuyHandler: function () {
         cc.director.runScene(new cc.TransitionFade(0.25, new IndexScene()), hex2Color(0xFFFFFF));
         App.showCpAd();
-        gameStepVo.step = randomInt(5, 10);
+        gameStepVo.step = 5;
         gameStepVo.saveToRemote();
     },
 

@@ -129,6 +129,8 @@
           <Image Name="home.png" />
           <Image Name="hp.png" />
           <Image Name="button.png" />
+          <Image Name="alipay.png" />
+          <Image Name="wechat.png" />
         </Folder>
         <Project Name="Level1.csd" Type="Node" />
         <Project Name="Level2.csd" Type="Node" />
@@ -163,6 +165,7 @@
         <Project Name="title_zh.csd" Type="Node" />
         <Project Name="title_en.csd" Type="Node" />
         <Project Name="BuyHpPanel.csd" Type="Layer" />
+        <Project Name="PaySelect.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -37,6 +37,7 @@ var res = {
 
     scene_index: "res/IndexScene.json",
     layer_buy_hp: "res/BuyHpPanel.json",
+    layer_pay: "res/PaySelect.json",
     node_title_zh: "res/title_zh.json",
     node_title_en: "res/title_en.json",
 

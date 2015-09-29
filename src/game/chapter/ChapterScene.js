@@ -102,17 +102,11 @@ var ChapterScene = cc.Scene.extend({
         this.pageIndex = page;
         this.scroll.setContentOffsetInDuration(cc.p(-App.WIN_W * page, 0), 0.35 * page);
 
-        cc.eventManager.addCustomListener(GameEvent.SHOW_BUY_HP, this.showBuyHpPanel.bind(this));
     },
     onExit: function () {
         this._super();
 
         SoundsManager.instance.stopAll();
-        cc.eventManager.removeCustomListeners(GameEvent.SHOW_BUY_HP);
-    },
-
-    showBuyHpPanel: function () {
-        this.addChild(new BuyHpPanel(), 100);
     },
 
     onTouchesBeganHandler: function (touches, event) {

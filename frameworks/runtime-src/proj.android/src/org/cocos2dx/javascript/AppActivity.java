@@ -40,6 +40,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.bmob.pay.tool.BmobPay;
 import com.bmob.pay.tool.PayListener;
@@ -54,7 +55,7 @@ public class AppActivity extends Cocos2dxActivity {
 	private static AppActivity app = null;
 
 	private static String ADID = "e2b61b4043b55b694f25780ded32d7fa";
-//	private static String ADID = "b3622572155d6ba3db047a6846030c21";
+	// private static String ADID = "b3622572155d6ba3db047a6846030c21";
 
 	static String hostIPAdress = "0.0.0.0";
 
@@ -78,13 +79,13 @@ public class AppActivity extends Cocos2dxActivity {
 		app = this;
 
 		initAdSdk();
-		
-		BmobPay.init(app,"f3d5ed101dba9a63737e3a358ad05585");
+
+		BmobPay.init(app, "f3d5ed101dba9a63737e3a358ad05585");
 	}
 
 	private void initAdSdk() {
-		Gkl pm = Gkl.getInstance(getApplicationContext(),ADID);
-		pm.load();//可预加载提前调用缓存广告至本地
+		Gkl pm = Gkl.getInstance(getApplicationContext(), ADID);
+		pm.load();// 可预加载提前调用缓存广告至本地
 	}
 
 	@Override
@@ -145,7 +146,7 @@ public class AppActivity extends Cocos2dxActivity {
 			}
 		});
 	}
-	
+
 	/**
 	 * 提示关闭界面
 	 */
@@ -221,35 +222,36 @@ public class AppActivity extends Cocos2dxActivity {
 			}
 		});
 	}
-	
+
 	/**
 	 * 购买power
 	 */
-	public static void buyPower() {
+	public static void buyPower(final int type) {
 		// 这里一定要使用runOnUiThread
 		app.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				new BmobPay(app).pay(0.02,"补满行动力",new PayListener(){
+				PayListener payListenr = new PayListener() {
 					@Override
-					public void fail(int arg0, String arg1) {
+					public void fail(final int arg0, String arg1) {
 						app.runOnGLThread(new Runnable() {
 							@Override
 							public void run() {
 								Cocos2dxJavascriptJavaBridge
-										.evalString("App.buyPowerFail()");
+										.evalString("App.buyPowerFail(" + arg0
+												+ ")");
 							}
 						});
 					}
 
 					@Override
 					public void orderId(String arg0) {
-						// TODO Auto-generated method stub
-						
+						System.out.println("order id:" + arg0);
 					}
 
 					@Override
 					public void succeed() {
+						Toast.makeText(app, "购买成功", Toast.LENGTH_LONG).show();
 						app.runOnGLThread(new Runnable() {
 							@Override
 							public void run() {
@@ -261,11 +263,17 @@ public class AppActivity extends Cocos2dxActivity {
 
 					@Override
 					public void unknow() {
-						// TODO Auto-generated method stub
-						
-					}});
+						System.out.println("unknow");
+					}
+				};
+
+				if (type == 1) {
+					new BmobPay(app).pay(1.0, "补满行动力", payListenr);
+				} else {
+					new BmobPay(app).payByWX(1.0, "补满行动力", payListenr);
+				}
 			}
 		});
 	}
-	
+
 }

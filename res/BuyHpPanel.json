@@ -313,9 +313,9 @@
                   "ScaleY": 1.0
                 },
                 "CColor": {
-                  "R": 121,
-                  "G": 171,
-                  "B": 0
+                  "R": 189,
+                  "G": 220,
+                  "B": 114
                 },
                 "IconVisible": false,
                 "PrePosition": {
@@ -341,7 +341,7 @@
               },
               {
                 "IsCustomSize": true,
-                "FontSize": 30,
+                "FontSize": 26,
                 "LabelText": "没有行动力了，只要1元可以恢复满哦\n\n",
                 "OutlineColor": {
                   "G": 0,
@@ -367,9 +367,9 @@
                   "ScaleY": 1.0
                 },
                 "CColor": {
-                  "R": 232,
-                  "G": 18,
-                  "B": 18
+                  "R": 144,
+                  "G": 118,
+                  "B": 118
                 },
                 "IconVisible": false,
                 "PrePosition": {

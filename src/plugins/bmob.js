@@ -1737,7 +1737,6 @@ var exports;
 
     /**
      * The inverse function of Bmob._encode.
-     * TODO: make decode not mutate value.
      */
     Bmob._decode = function (key, value) {
         var _ = Bmob._;

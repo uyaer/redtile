@@ -64,18 +64,18 @@
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
                 <Position X="169.2120" Y="115.6223" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="121" G="171" B="0" />
+                <CColor A="255" R="189" G="220" B="114" />
                 <PrePosition X="0.4948" Y="0.4174" />
                 <PreSize X="0.7500" Y="0.0843" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tipTF" ActionTag="-1465239865" Tag="55" IconVisible="False" LeftMargin="23.4312" RightMargin="18.5688" TopMargin="90.9054" BottomMargin="106.0946" IsCustomSize="True" FontSize="30" LabelText="没有行动力了，只要1元可以恢复满哦&#xA;&#xA;" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="tipTF" ActionTag="-1465239865" Tag="55" IconVisible="False" LeftMargin="23.4312" RightMargin="18.5688" TopMargin="90.9054" BottomMargin="106.0946" IsCustomSize="True" FontSize="26" LabelText="没有行动力了，只要1元可以恢复满哦&#xA;&#xA;" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="300.0000" Y="80.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
                 <Position X="173.4312" Y="186.0946" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="232" G="18" B="18" />
+                <CColor A="255" R="144" G="118" B="118" />
                 <PrePosition X="0.5071" Y="0.6718" />
                 <PreSize X="0.7500" Y="0.1124" />
                 <OutlineColor A="255" R="255" G="0" B="0" />

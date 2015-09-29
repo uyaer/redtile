@@ -13,6 +13,8 @@
       <FilePathData Path="ui/win.png" />
       <FilePathData Path="ui/hp.png" />
       <FilePathData Path="ui/button.png" />
+      <FilePathData Path="ui/alipay.png" />
+      <FilePathData Path="ui/wechat.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

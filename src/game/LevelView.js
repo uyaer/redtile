@@ -40,7 +40,7 @@ var LevelView = cc.Layer.extend({
 
     makeScenes: function (lv) {
         var levelVo = LevelManager.instance.loadLevel(lv);
-        var sceneList = levelVo.sceneList;
+        var sceneList = levelVo.sceneList.concat();
         var everyH = App.WIN_H / sceneList.length;
         this.everyH = everyH;
         for (var i = 0; i < sceneList.length; i++) {
@@ -262,14 +262,15 @@ var LevelView = cc.Layer.extend({
     restart: function () {
         this.unscheduleUpdate();
         this.deadCount++;
-        //gameStepVo.step--;
-        gameStepVo.step=0;
-        //gameStepVo.saveToRemote();
+        //减少power
+        gameStepVo.step--;
+        gameStepVo.saveToRemote();
         if (gameStepVo.step > 0) {
             this.start();
         } else {
             //没有生命了
             this.parent.addChild(new BuyHpPanel(), 100);
+            this.control.updateDead();
         }
     },
 

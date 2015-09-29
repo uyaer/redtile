@@ -67,6 +67,7 @@
     "src/game/layer/TutorialLayer.js",
     "src/game/layer/IndexTitle.js",
     "src/game/layer/BuyHpPanel.js",
+    "src/game/layer/PaySelectPanel.js",
 
     "src/game/IndexScene.js",
     "src/game/GameScene.js",

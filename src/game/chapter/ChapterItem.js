@@ -40,7 +40,7 @@ var ChapterItem = cc.Node.extend({
                 LevelManager.instance.currentLevel = this.lv;
                 cc.director.runScene(new GameScene());
             } else {
-                cc.eventManager.dispatchCustomEvent(GameEvent.SHOW_BUY_HP);
+                cc.director.getRunningScene().addChild(new BuyHpPanel(), 100);
             }
         }
     }
