@@ -47,7 +47,8 @@ var BuyHpPanel = cc.Node.extend({
         var that = this;
         this.okBtn.addClickEventListener(function () {
             if (Const.LANG == "zh") {
-                //TODO buy power
+                // buy power
+                App.buyPower();
             } else {
                 that.noBuyHandler();
             }
@@ -61,6 +62,8 @@ var BuyHpPanel = cc.Node.extend({
     noBuyHandler: function () {
         cc.director.runScene(new cc.TransitionFade(0.25, new IndexScene()), hex2Color(0xFFFFFF));
         App.showCpAd();
+        gameStepVo.step = randomInt(5, 10);
+        gameStepVo.saveToRemote();
     },
 
     onExit: function () {

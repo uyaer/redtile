@@ -262,8 +262,9 @@ var LevelView = cc.Layer.extend({
     restart: function () {
         this.unscheduleUpdate();
         this.deadCount++;
-        gameStepVo.step--;
-        gameStepVo.saveToRemote();
+        //gameStepVo.step--;
+        gameStepVo.step=0;
+        //gameStepVo.saveToRemote();
         if (gameStepVo.step > 0) {
             this.start();
         } else {
