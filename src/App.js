@@ -62,7 +62,7 @@ App.checkAppVertify = function () {
  * 向android端发送请求关闭 (显示广告)
  */
 App.showExitAd = function () {
-    jsb.reflection.callStaticMethod(App.__android_class, "showExitAd", "()V");
+    App.showConfirmClose();
 }
 /**
  * 向android端发送请求关闭

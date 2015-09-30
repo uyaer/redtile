@@ -40,11 +40,10 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.bmob.pay.tool.BmobPay;
-import com.bmob.pay.tool.PayListener;
-import com.kzpa.pai.Gkl;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.umeng.analytics.MobclickAgent;
 import com.uyaer.myprincess.R;
 
@@ -54,14 +53,12 @@ import com.uyaer.myprincess.R;
 public class AppActivity extends Cocos2dxActivity {
 	private static AppActivity app = null;
 
-	private static String ADID = "e2b61b4043b55b694f25780ded32d7fa";
-	// private static String ADID = "b3622572155d6ba3db047a6846030c21";
+	public InterstitialAd mInterstitialAd;
 
 	static String hostIPAdress = "0.0.0.0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
 		if (nativeIsLandScape()) {
@@ -80,12 +77,25 @@ public class AppActivity extends Cocos2dxActivity {
 
 		initAdSdk();
 
-		BmobPay.init(app, "f3d5ed101dba9a63737e3a358ad05585");
 	}
 
 	private void initAdSdk() {
-		Gkl pm = Gkl.getInstance(getApplicationContext(), ADID);
-		pm.load();// 可预加载提前调用缓存广告至本地
+		mInterstitialAd = new InterstitialAd(this);
+		mInterstitialAd.setAdUnitId("ca-app-pub-7430856253637281/8944601052");
+		mInterstitialAd.setAdListener(new AdListener() {
+			@Override
+			public void onAdClosed() {
+				requestNewInterstitial();
+			}
+		});
+
+		requestNewInterstitial();
+	}
+
+	private void requestNewInterstitial() {
+		AdRequest adRequest = new AdRequest.Builder().build();
+
+		mInterstitialAd.loadAd(adRequest);
 	}
 
 	@Override
@@ -129,23 +139,6 @@ public class AppActivity extends Cocos2dxActivity {
 	 * 提供给js调用的方法
 	 ****************************************************************************** 
 	 */
-
-	/**
-	 * 显示广告退出
-	 */
-	public static void showExitAd() {
-		// 这里一定要使用runOnUiThread
-		app.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				// daoyoudao 360 ad
-				Gkl pm = Gkl.getInstance(app.getApplicationContext(), ADID);
-				pm.load();
-				pm.exit(app);
-
-			}
-		});
-	}
 
 	/**
 	 * 提示关闭界面
@@ -215,62 +208,8 @@ public class AppActivity extends Cocos2dxActivity {
 		app.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				Gkl pm = Gkl.getInstance(app.getApplicationContext(), ADID);
-				pm.c();
-				pm.show(app.getApplicationContext());
-				pm.load();
-			}
-		});
-	}
-
-	/**
-	 * 购买power
-	 */
-	public static void buyPower(final int type) {
-		// 这里一定要使用runOnUiThread
-		app.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				PayListener payListenr = new PayListener() {
-					@Override
-					public void fail(final int arg0, String arg1) {
-						app.runOnGLThread(new Runnable() {
-							@Override
-							public void run() {
-								Cocos2dxJavascriptJavaBridge
-										.evalString("App.buyPowerFail(" + arg0
-												+ ")");
-							}
-						});
-					}
-
-					@Override
-					public void orderId(String arg0) {
-						System.out.println("order id:" + arg0);
-					}
-
-					@Override
-					public void succeed() {
-						Toast.makeText(app, "购买成功", Toast.LENGTH_LONG).show();
-						app.runOnGLThread(new Runnable() {
-							@Override
-							public void run() {
-								Cocos2dxJavascriptJavaBridge
-										.evalString("App.buyPowerSuccess()");
-							}
-						});
-					}
-
-					@Override
-					public void unknow() {
-						System.out.println("unknow");
-					}
-				};
-
-				if (type == 1) {
-					new BmobPay(app).pay(1.0, "补满行动力", payListenr);
-				} else {
-					new BmobPay(app).payByWX(1.0, "补满行动力", payListenr);
+				if (app.mInterstitialAd.isLoaded()) {
+					app.mInterstitialAd.show();
 				}
 			}
 		});

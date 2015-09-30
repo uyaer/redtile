@@ -33,26 +33,13 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="cancelBtn" ActionTag="1834029302" Tag="59" IconVisible="False" LeftMargin="188.1179" RightMargin="33.8821" TopMargin="210.5331" BottomMargin="14.4669" TouchEnable="True" FontSize="26" ButtonText="取消" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="90" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="okBtn" ActionTag="-1161691699" Tag="58" IconVisible="False" LeftMargin="118.4626" RightMargin="103.5374" TopMargin="210.3768" BottomMargin="14.6232" TouchEnable="True" FontSize="26" ButtonText="OK" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="90" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="120.0000" Y="52.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="248.1179" Y="40.4669" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="182" G="193" B="175" />
-                <PrePosition X="0.7255" Y="0.1461" />
-                <PreSize X="0.3000" Y="0.0730" />
-                <TextColor A="255" R="0" G="0" B="0" />
-                <NormalFileData Type="MarkedSubImage" Path="ui/button.png" Plist="ui.plist" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="okBtn" ActionTag="-1161691699" Tag="58" IconVisible="False" LeftMargin="30.4622" RightMargin="191.5378" TopMargin="210.3769" BottomMargin="14.6231" TouchEnable="True" FontSize="26" ButtonText="OK" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="90" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="120.0000" Y="52.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="90.4622" Y="40.6231" />
+                <Position X="178.4626" Y="40.6232" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="73" G="179" B="12" />
-                <PrePosition X="0.2645" Y="0.1467" />
+                <PrePosition X="0.5218" Y="0.1467" />
                 <PreSize X="0.3000" Y="0.0730" />
                 <TextColor A="255" R="0" G="0" B="0" />
                 <NormalFileData Type="MarkedSubImage" Path="ui/button.png" Plist="ui.plist" />
