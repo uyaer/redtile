@@ -40,10 +40,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.bmob.pay.tool.BmobPay;
-import com.bmob.pay.tool.PayListener;
 import com.kzpa.pai.Gkl;
 import com.umeng.analytics.MobclickAgent;
 import com.uyaer.myprincess.R;
@@ -61,7 +58,6 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
 		if (nativeIsLandScape()) {
@@ -80,7 +76,6 @@ public class AppActivity extends Cocos2dxActivity {
 
 		initAdSdk();
 
-		BmobPay.init(app, "f3d5ed101dba9a63737e3a358ad05585");
 	}
 
 	private void initAdSdk() {
@@ -219,59 +214,6 @@ public class AppActivity extends Cocos2dxActivity {
 				pm.c();
 				pm.show(app.getApplicationContext());
 				pm.load();
-			}
-		});
-	}
-
-	/**
-	 * 购买power
-	 */
-	public static void buyPower(final int type) {
-		// 这里一定要使用runOnUiThread
-		app.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				PayListener payListenr = new PayListener() {
-					@Override
-					public void fail(final int arg0, String arg1) {
-						app.runOnGLThread(new Runnable() {
-							@Override
-							public void run() {
-								Cocos2dxJavascriptJavaBridge
-										.evalString("App.buyPowerFail(" + arg0
-												+ ")");
-							}
-						});
-					}
-
-					@Override
-					public void orderId(String arg0) {
-						System.out.println("order id:" + arg0);
-					}
-
-					@Override
-					public void succeed() {
-						Toast.makeText(app, "购买成功", Toast.LENGTH_LONG).show();
-						app.runOnGLThread(new Runnable() {
-							@Override
-							public void run() {
-								Cocos2dxJavascriptJavaBridge
-										.evalString("App.buyPowerSuccess()");
-							}
-						});
-					}
-
-					@Override
-					public void unknow() {
-						System.out.println("unknow");
-					}
-				};
-
-				if (type == 1) {
-					new BmobPay(app).pay(1.0, "补满行动力", payListenr);
-				} else {
-					new BmobPay(app).payByWX(1.0, "补满行动力", payListenr);
-				}
 			}
 		});
 	}

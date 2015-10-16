@@ -44,15 +44,7 @@ var BuyHpPanel = cc.Node.extend({
         this.okBtn.setTitleText(Lang.i18n(12));
         this.cancelBtn.setTitleText(Lang.i18n(13));
 
-        var that = this;
-        this.okBtn.addClickEventListener(function () {
-            if (Const.LANG == "zh") {
-                // buy power
-                cc.director.getRunningScene().addChild(new PaySelectPanel(),101);
-            } else {
-                that.noBuyHandler();
-            }
-        });
+        this.okBtn.addClickEventListener(this.noBuyHandler);
         this.cancelBtn.addClickEventListener(this.noBuyHandler);
     },
 

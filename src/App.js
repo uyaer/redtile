@@ -76,22 +76,6 @@ App.showConfirmClose = function () {
 App.closeApp = function () {
     cc.director.end();
 }
-/**
- * 购买能量
- * @type type {number}
- */
-App.buyPower = function (type) {
-    jsb.reflection.callStaticMethod(App.__android_class, "buyPower", "(I)V", type);
-}
-
-App.buyPowerSuccess = function () {
-    gameStepVo.step = gameStepVo.maxStep;
-    gameStepVo.saveToRemote();
-    cc.director.runScene(new GameScene());
-}
-App.buyPowerFail = function (code) {
-    showTip("购买失败,错误码：" + code);
-}
 
 App.openHome = function () {
     var url = "http://www.uyaer.com";
