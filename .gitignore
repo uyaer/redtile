@@ -14,3 +14,4 @@ frameworks/runtime-src/proj.win32/*
 jsb.sqlite
 frameworks/runtime-src/proj.android/.settings/org.eclipse.core.resources.prefs
 frameworks/runtime-src/proj.win32/redtile.vcxproj
+package/redtile-release-signed.apk

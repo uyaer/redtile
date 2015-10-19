@@ -23,7 +23,7 @@
         <IsDebugKeystore Value="False" />
         <KeystorePassword Value="uyaer1234567890" />
         <KeystoreAliasName Value="uyaer" />
-        <KeystoreAliasPassword Value="1234567890" />
+        <KeystoreAliasPassword Value="uyaer1234567890" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
       </Value>
